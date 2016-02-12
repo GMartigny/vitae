@@ -1,0 +1,29 @@
+{
+    "en": [
+        {
+            "title": "About me",
+            "paragraph": "Hello, my name is Guillaume.<br/>I'm a young web developper."
+        },
+        {
+            "title": "Experience",
+            "paragraph": ""
+        },
+        {
+            "title": "Skills",
+            "paragraph": ""
+        },
+        {
+            "title": "Some works",
+            "paragraph": ""
+        },
+        {
+            "title": "Contact me",
+            "paragraph": ""
+        }
+    ],
+    "fr": [
+        {
+            
+        }
+    ]
+}

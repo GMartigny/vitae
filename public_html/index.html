@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="vitae" ng-controller="ScrollController as scroller">
+    <head>
+        <title>My resumé</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="vitae.css" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    </head>
+    <body class="ready-{{langer.ready}}"
+          ng-controller="LangController as langer"
+          ng-wheel="scroller.scroll">
+        {{scroller.depth}}
+        <main id="main">
+            <article ng-repeat="article in langer.localContent"
+                     class="article overflow-{{(scroller.depth > $index)}}"
+                     style="z-index: {{langer.localContent.length - $index}}; transition-delay: 0s, 0.{{langer.localContent.length - $index}}s;
+                     transform: scale( {{(1 + scroller.depth) / ($index + 1)}} ); -webkit-filter: blur( {{(($index - scroller.depth) * 2)}}px )">
+                <h1 ng-bind-html="toHTML(article.title)"></h1>
+                <p ng-bind-html="toHTML(article.paragraph)"></p>
+            </article>
+        </main>
+        <aside id="afix">
+            <ul>
+                <li ng-repeat="article in langer.localContent" ng-click="scroller.jumpTo($index)">{{article.title}}</li>
+            </ul>
+            <button ng-click="langer.setContent('en')">en</button>
+            <button ng-click="langer.setContent('fr')">fr</button>
+        </aside>
+        <script src="vitae.js"></script>
+        <script src="depth.js"></script>
+    </body>
+</html>
