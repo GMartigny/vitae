@@ -16,7 +16,7 @@ body{
     overflow: hidden;
     font-family: sans-serif;
 }
-body.ready-true #main .article{
+body.ready #main .article{
     top: 50%;
 }
 
@@ -42,6 +42,16 @@ body.ready-true #main .article{
         rgba(250, 250, 250, .5) 32%, rgba(220, 230, 240, .5) 34%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
 }
+#main .article:before{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: solid rgba(250, 250, 250, .8);
+    border-width: 2px 0 0 2px;
+}
 #main .article.overflow{
     opacity: 0;
     z-index: -1 !important;
@@ -65,12 +75,12 @@ aside{
     font-family: 'Philosopher', sans-serif;
     position: absolute;
 }
-#afix{
+aside#onTheRight{
     top: 200px;
     right: 20px;
     text-align: right;
 }
-#afix ul{
+#afix{
     margin: 0;
     padding: 0;
     list-style: none;
