@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/Person">
     <head>
-        <title>My resumé</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My resumé, that's all !</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <meta itemprop="image" content="http://www.guillaume-martigny.fr/ident.png"/>
+        <meta itemprop="name" content="Guillaume Martigny"/>
+
+        <meta name="description" content="Get to know me better and have a look at what I can do."/>
+        <meta name="keywords" content="guillaume martigny"/>
+        <meta name="keywords" content="resumé, developper, web, IT, front-end, javascript, multimedia"/>
+        <meta name="keywords" content="CV, développeur, informatique, multimédia, technologies"/>
+
+        <meta property="og:title" content="Guillaume Martigny's resumé"/>
+        <meta property="og:type" content="profile"/>
+        <meta property="profile:first_name" content="Guillaume"/>
+        <meta property="profile:last_name" content="Martigny"/>
+        <meta property="og:url" content="http://www.guillaume-martigny.fr/"/>
+        <meta property="og:image" content="http://www.guillaume-martigny.fr/ident.png"/>
+
         <link rel="stylesheet" href="vitae.min.css" type="text/css"/>
-        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
+        <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'/>
     </head>
     <body>
         <main id="main">
@@ -38,7 +54,7 @@
                     <li>PHP / MySQL</li>
                 </ul>
                 <p>
-                    Want to get a pick at my creations ? You can head to my <a href="http://gmartigny.github.io">Github page</a>.
+                    Want to get a pick at my personal creations ? You can head to my <a href="http://gmartigny.github.io">Github page</a>.
                 </p>
             </article>
             <article class="article">
@@ -59,5 +75,14 @@
             </ul>
         </aside>
         <script src="depth.min.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-40622134-2', 'auto');
+            ga('send', 'pageview');
+        </script>
     </body>
 </html>
