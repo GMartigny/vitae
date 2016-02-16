@@ -51,7 +51,7 @@
             article.style.filter = blur;
             article.style.WebkitFilter = blur;
 
-            if(depth-0.7 > i)
+            if(depth-0.5 > i)
                 article.classList.add("overflow");
             else
                 article.classList.remove("overflow");
