@@ -73,18 +73,21 @@ ul{
     font-family: 'Ubuntu', sans-serif;
 }
 .article p{
-    margin: 0;
+    margin: 1em 0;
 }
 
 aside{
+    display: table;
     position: absolute;
+    height: 100%;
 }
 aside#onTheRight{
-    top: 200px;
     right: 20px;
     text-align: right;
 }
 #afix{
+    display: table-cell;
+    vertical-align: middle;
     margin: 0;
     padding: 0;
     z-index: 100;
