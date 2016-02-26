@@ -1,5 +1,5 @@
 /*
-    Created on : 10 févr. 2016, 17:29:00
+    Created on : 10 fÃ©vr. 2016, 17:29:00
     Author     : Guillaume Martigny
 */
 
@@ -21,13 +21,13 @@ body.ready #main .article{
     top: 50%;
 }
 
-ul{
-    list-style: none;
+.stroke{
+    text-decoration: line-through;
 }
 
 #main{
     position: absolute;
-    width: 70%;
+    width: 980px;
     height: 100%;
     left: 0;
     right: 0;
@@ -65,15 +65,35 @@ ul{
     transition: opacity linear .3s, z-index linear 0s .3s;
 }
 
-.article h1{
-    font-size: 35px;
-    margin: 1em;
+.article h1, .article h2{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 1.4em 1em;
     color: #555;
     text-shadow: -1px -1px 0 #333, 2px 2px 0 #FFF;
-    font-family: 'Ubuntu', sans-serif;
+}
+.article h1{
+    font-size: 36px;
+}
+.article h2{
+    font-size: 22px;
 }
 .article p{
     margin: 1em 0;
+    clear: both;
+}
+
+.article a{
+    text-decoration: none;
+    color: #d95b5b;
+    font-weight: bold;
+}
+.article a:hover{
+    text-decoration: underline;
+}
+
+#ident{
+    float: left;
+    margin: 10px;
 }
 
 aside{
@@ -82,7 +102,7 @@ aside{
     height: 100%;
 }
 aside#onTheRight{
-    right: 20px;
+    right: 50px;
     text-align: right;
 }
 #afix{
@@ -91,6 +111,7 @@ aside#onTheRight{
     margin: 0;
     padding: 0;
     z-index: 100;
+    list-style: none;
 }
 #afix li{
     padding: 10px;

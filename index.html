@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <meta itemprop="image" content="http://www.guillaume-martigny.fr/ident.png"/>
-        <meta itemprop="name" content="Guillaume Martigny"/>
 
         <meta name="description" content="Get to know me better and have a look at what I can do."/>
         <meta name="keywords" content="guillaume martigny"/>
@@ -14,6 +13,7 @@
         <meta name="keywords" content="CV, développeur, informatique, multimédia, technologies"/>
 
         <meta property="og:title" content="Guillaume Martigny's resumé"/>
+        <meta property="og:description" content="Get to know me better and have a look at what I can do."/>
         <meta property="og:type" content="profile"/>
         <meta property="profile:first_name" content="Guillaume"/>
         <meta property="profile:last_name" content="Martigny"/>
@@ -28,8 +28,17 @@
         <main id="main">
             <article class="article">
                 <h1>About me</h1>
+                <img src="" alt="myself" id="ident" width="120" height="150"/>
+                <h2 itemprop="name"><br/>Guillaume<br/>Martigny</h2>
                 <p>
-                    Hello, my name is <span title="good luck with that english speaker ;)">Guillaume</span> and I love making cool visual with new web techs.
+                    Hello, my name is <span title="good luck with that, english speaker ;)">Guillaume</span> and I'm a web techs ninja.
+                </p>
+                <p>
+                    I'm really passionated about all of the new technologies and I love to use them to create cool visual experiences.<br/>
+                    I also really enjoy making tools to ease other developpers life.
+                </p>
+                <p>
+                    In my spare time, I practice Capoeïra and play <span class="stroke">lots of</span> video-games.
                 </p>
             </article>
             <article class="article">
@@ -37,16 +46,35 @@
                 <dl>
                     <dt>2015</dt>
                     <dd>Level II Engeneer on IT project management</dd>
+                    <dd>
+                        At <a href="http://www.imie-ecole-informatique.fr/">IMIE Nantes<sup>(fr)</sup></a> (4 years course)
+                        <ul>
+                            <li>Project management</li>
+                            <li>Global IT knowledge</li>
+                            <li>Modeling techniques</li>
+                        </ul>
+                    </dd>
                     <dt>2010</dt>
-                    <dd>2 years technical degree in IT</dd>
+                    <dd>Technical degree in IT</dd>
+                    <dd>
+                        At <a href="http://www.iutnantes.univ-nantes.fr/">IUT Nantes<sup>(fr)</sup></a> (2 years course)
+                        <ul>
+                            <li>OOP</li>
+                            <li>Network and infra</li>
+                            <li>Communication</li>
+                        </ul>
+                    </dd>
                 </dl>
             </article>
             <article class="article">
                 <h1>Skills</h1>
+                <h2>Technical</h2>
                 <ul>
                     <li>Javascript
                         <ul>
+                            <li>Vanilla</li>
                             <li>JQuery</li>
+                            <li>Node.js</li>
                             <li>Angular</li>
                         </ul>
                     </li>
@@ -56,18 +84,38 @@
                 <p>
                     Want to get a pick at my personal creations ? You can head to my <a href="http://gmartigny.github.io">Github page</a>.
                 </p>
+                <h2>Others</h2>
+                <ul>
+                    <li>Project management</li>
+                    <li>French, English</li>
+                    <li>Netbeans</li>
+                </ul>
             </article>
             <article class="article">
                 <h1>Experiences</h1>
-                <p>
-                    I work at <a href="http://www.ageval.fr">Ageval Solutions (fr)</a> since 2013.
-                </p>
+                <dl>
+                    <dt>2013 - today</dt>
+                    <dd>
+                        I currently working at <a href="http://www.ageval.fr">Ageval Solutions<sup>(fr)</sup></a> as a web developper.<br/>
+                        My main task is to maintain and improve a web application sold to customer. I was in charge of the front-end in association with graphists.
+                        Keeping a <span title="All the way to IE8">wide range of browsers compatibility</span> and ensure good ergonomy is our main goal.
+                    </dd>
+                    <dt>2012 - 2013</dt>
+                    <dd>
+                        For a year, I work as web developper at <a href="http://www.adoc-solutions.eu/">@doc Solutions<sup>(fr)</sup></a>.<br/>
+                        I created several web sites using Joomla from mock-ups. I built a reservation tickets system hooked at a payement module.
+                    </dd>
+                </dl>
             </article>
             <article class="article">
                 <h1>Contact me</h1>
                 <p>
-                    You can send me an email at <a href="mailto:guillaume.martigny@gmail.com">guillaume.martigny@gmail.com</a>
+                    You can send me an email at <a href="mailto:guillaume.martigny@gmail.com" itemprop="email">guillaume.martigny@gmail.com</a><br/>
+                    Or feel free to give a call at <a href="callto:+33660223772" itemprop="telephone">+33 6 60 22 37 72</a>
                 </p>
+                <a href="https://github.com/GMartigny">Github</a>
+                <a href="https://www.linkedin.com/in/guillaumemartigny">LinkedIn</a>
+                <a href="http://www.viadeo.com/p/0021pt05dpt7l1wq">Viadeo</a>
             </article>
         </main>
         <aside id="onTheRight">
@@ -76,13 +124,13 @@
         </aside>
         <script src="depth.min.js"></script>
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-40622134-2', 'auto');
-            ga('send', 'pageview');
+//            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//
+//            ga('create', 'UA-40622134-2', 'auto');
+//            ga('send', 'pageview');
         </script>
     </body>
 </html>

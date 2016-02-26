@@ -45,7 +45,7 @@
         for(var i = 0, l = articles.length; i < l; ++i){
             var article = articles[i],
                 scale = "scale(" + (1 / Math.pow(2, (i - depth))) + ")",
-                blur = "blur(" + ((i - depth) * 2) + "px)";
+                blur = "blur(" + ((i - depth) * 2.5) + "px)";
             article.style.transform = scale;
             article.style.WebkitTransform = scale;
             article.style.filter = blur;
