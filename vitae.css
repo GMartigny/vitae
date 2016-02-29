@@ -90,10 +90,40 @@ body.ready #main .article{
 .article a:hover{
     text-decoration: underline;
 }
+.article a:hover sup{
+    text-decoration: none;
+}
 
 #ident{
     float: left;
     margin: 10px;
+}
+
+ul.profiles{
+    list-style: none;
+    margin: 20px 0;
+}
+ul.profiles li{
+    margin: 20px 0;
+}
+.profiles a{
+  display: inline-block;
+  background: #FFF;
+}
+.profiles a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+}
+.profiles a:hover:after{
+    background-color: #d95b5b;
+}
+.profiles img{
+    vertical-align: middle;
 }
 
 aside{

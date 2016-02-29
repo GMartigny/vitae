@@ -25,7 +25,8 @@
 
     window.addEventListener("wheel", function(e){
         if(!loopTimer){
-            depth = parseFloat((depth + e.deltaY / 500).toFixed(3));
+            var dir = (e.deltaY<0 ? -1 : 1);
+            depth = parseFloat((depth + dir*0.2).toFixed(3));
             if(depth < 0)
                 depth = 0;
             else if(depth > articles.length - 1)
