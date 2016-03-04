@@ -1,5 +1,5 @@
 /*
-    Created on : 10 fÃ©vr. 2016, 17:29:00
+    Created on : 10 feb. 2016, 17:29:00
     Author     : Guillaume Martigny
 */
 
@@ -14,7 +14,7 @@ html, body{
 body{
     margin: 0;
     overflow: hidden;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'glyphs', 'Philosopher', sans-serif;
     font-size: 16px;
     color: #111;
 }
@@ -24,6 +24,9 @@ body.ready #main .article{
 
 .stroke{
     text-decoration: line-through;
+}
+.only-print{
+    display: none;
 }
 
 #main{
@@ -83,7 +86,7 @@ body.ready #main .article{
     clear: both;
 }
 
-.article a{
+a{
     text-decoration: none;
     color: #d95b5b;
     font-weight: bold;
@@ -139,15 +142,70 @@ aside#onTheRight{
 #afix{
     display: table-cell;
     vertical-align: middle;
+}
+#afix-list{
     margin: 0;
     padding: 0;
     z-index: 100;
     list-style: none;
 }
-#afix li{
+#afix-list li{
     padding: 10px;
     cursor: pointer;
 }
-#afix li.active{
+#afix-list li.active{
     border-left: 3px solid #333;
+}
+
+#printer{
+    padding: 10px;
+}
+
+@media print{
+    body{
+        overflow: auto;
+        font-size: 12pt;
+    }
+
+    .no-print{
+        display: none;
+    }
+    .only-print{
+        display: block;
+    }
+
+    #main{
+        width: 18cm;
+    }
+
+    #contact-infos{
+        float: right;
+    }
+
+    a sup{
+        display: none;
+    }
+
+    #main .article{
+        position: relative;
+        top: 0 !important;
+        margin: 10px 0;
+        overflow: hidden;
+        height: auto;
+        opacity: 1 !important;
+        transform: none !important;
+        -webkit-filter: blur(0px) !important;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+        page-break-inside: avoid;
+    }
+
+    .article h1, .article h2{
+        margin: 1em;
+    }
+    .article h1{
+        font-size: 20pt;
+    }
+    .article h2{
+        font-size: 16pt;
+    }
 }

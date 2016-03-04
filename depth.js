@@ -2,7 +2,7 @@
     "use strict";
     var main = document.getElementById("main"),
         articles = main.getElementsByClassName("article"),
-        afix = document.getElementById("afix"),
+        afix = document.getElementById("afix-list"),
         afix_active = null,
         depth = 0;
 
