@@ -1,5 +1,5 @@
 /*
-    Created on : 10 fÃ©vr. 2016, 17:29:00
+    Created on : 10 feb. 2016
     Author     : Guillaume Martigny
 */
 
@@ -14,7 +14,8 @@ html, body{
 body{
     margin: 0;
     overflow: hidden;
-    font-family: 'Philosopher', sans-serif;
+    font-family: "Philosopher", sans-serif;
+    font-size: 16px;
     color: #111;
 }
 body.ready #main .article{
@@ -24,29 +25,32 @@ body.ready #main .article{
 .stroke{
     text-decoration: line-through;
 }
+.only-print{
+    display: none;
+}
 
 #main{
     position: absolute;
-    width: 980px;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #main .article{
     position: absolute;
-    margin-top: -300px;
     top: -100%;
-    width: 100%;
+    left: 0;
+    right: 0;
+    width: 980px;
     height: 600px;
+    margin: -300px auto 0;
     line-height: 1.5em;
-    padding: 30px;
+    padding: 0 30px;
     opacity: 1;
     transition: opacity linear .3s 0s, top ease-out .5s;
     background: linear-gradient(120deg,
-        rgba(220, 230, 240, .5) 0, rgba(220, 230, 240, .5) 15%, rgba(250, 250, 250, .7) 20%, rgba(220, 230, 240, .5) 30%,
-        rgba(250, 250, 250, .5) 32%, rgba(220, 230, 240, .5) 34%);
+        rgba(220, 230, 240, .6) 0, rgba(220, 230, 240, .6) 15%, rgba(250, 250, 250, .7) 20%, rgba(220, 230, 240, .6) 30%,
+        rgba(250, 250, 250, .6) 32%, rgba(220, 230, 240, .6) 34%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
 }
 #main .article:before{
@@ -66,7 +70,7 @@ body.ready #main .article{
 }
 
 .article h1, .article h2{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", "Philosopher", sans-serif;
     margin: 1.4em 1em;
     color: #555;
     text-shadow: -1px -1px 0 #333, 2px 2px 0 #FFF;
@@ -82,7 +86,7 @@ body.ready #main .article{
     clear: both;
 }
 
-.article a{
+a{
     text-decoration: none;
     color: #d95b5b;
     font-weight: bold;
@@ -131,22 +135,97 @@ aside{
     position: absolute;
     height: 100%;
 }
-aside#onTheRight{
+#onTheRight{
     right: 50px;
     text-align: right;
 }
 #afix{
     display: table-cell;
     vertical-align: middle;
+    z-index: 100;
+}
+#afix-list{
     margin: 0;
     padding: 0;
-    z-index: 100;
     list-style: none;
 }
-#afix li{
+#afix-list li{
     padding: 10px;
     cursor: pointer;
 }
-#afix li.active{
+#afix-list li.active{
     border-left: 3px solid #333;
+}
+
+#printer{
+    display: block;
+    padding: 10px;
+}
+
+@media(max-width: 1290px){
+    #main .article{
+        width: calc(100% - 110px);
+        margin-right: 110px;
+    }
+    #onTheRight{
+        right: 0;
+    }
+}
+@media(max-width: 630px), (max-height: 600px){
+    body.ready #main .article{
+        height: 100vh;
+        margin: 0;
+        top: 0;
+        overflow: auto;
+    }
+}
+
+@media print{
+    body{
+        overflow: auto;
+        font-size: 12pt;
+    }
+
+    .no-print{
+        display: none;
+    }
+    .only-print{
+        display: block;
+    }
+
+    #main{
+        width: 18cm;
+    }
+
+    #contact-infos{
+        float: right;
+    }
+
+    a sup{
+        display: none;
+    }
+
+    #main .article{
+        position: relative;
+        top: 0 !important;
+        margin: 10px 0;
+        overflow: hidden;
+        height: auto;
+        opacity: 1 !important;
+        transform: none !important;
+        -webkit-filter: blur(0px) !important;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+        page-break-inside: avoid;
+        z-index: 1 !important;
+    }
+
+    .article h1, .article h2{
+        margin: 1em;
+    }
+    .article h1{
+        font-size: 20pt;
+    }
+    .article h2{
+        font-size: 16pt;
+    }
 }
