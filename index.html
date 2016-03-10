@@ -20,135 +20,133 @@
         <meta property="og:url" content="http://www.guillaume-martigny.fr/"/>
         <meta property="og:image" content="http://www.guillaume-martigny.fr/ident.png"/>
 
-        <link rel="stylesheet" href="vitae.min.css" type="text/css"/>
+        <link rel="stylesheet" href="res/vitae.min.css" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
-        <main id="main">
-            <article class="article">
-                <h1>About me</h1>
-                <img src="ident.png" alt="myself" id="ident" width="120" height="120"/>
-                <div class="only-print" id="contact-infos">
-                    <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow"><i class="fa fa-envelope-o"></i> guillaume.martigny@gmail.com</a><br/>
-                    <a href="tel:+33660223772" itemprop="telephone" rel="nofollow"><i class="fa fa-phone"></i> +33 6 60 22 37 72</a>
-                </div>
-                <h2 itemprop="name"><br/>Guillaume<br/>Martigny</h2>
-                <p>
-                    Hello, I've been a web developper for about 4 years.
-                </p>
-                <p>
-                    I'm really passionated about all of the new technologies and I love to use them to create cool visual experiences.<br/>
-                    I also really enjoy making tools to ease other developpers life.
-                </p>
-                <p>
-                    In my spare time, I practice Capoeïra, Salsa and play video-games.
-                </p>
-            </article>
-            <article class="article">
-                <h1>Learning</h1>
-                <dl>
-                    <dt>2015</dt>
-                    <dd>Level II Engineer on IT project management</dd>
-                    <dd>
-                        At <a href="http://www.imie-ecole-informatique.fr/">IMIE Nantes<sup>(fr)</sup></a> (4 years course)
-                        <ul>
-                            <li>Project management</li>
-                            <li>Global IT knowledge</li>
-                            <li>Modeling techniques</li>
-                        </ul>
-                    </dd>
-                    <dt>2010</dt>
-                    <dd>Technical degree in IT</dd>
-                    <dd>
-                        At <a href="http://www.iutnantes.univ-nantes.fr/">IUT Nantes<sup>(fr)</sup></a> (2 years course)
-                        <ul>
-                            <li>OOP</li>
-                            <li>Network and infra</li>
-                            <li>Communication</li>
-                        </ul>
-                    </dd>
-                    <dt>2008</dt>
-                    <dd>Bachelor's degree in engineer's sciences</dd>
-                </dl>
-            </article>
-            <article class="article">
-                <h1>Skills</h1>
-                <h2>Technical</h2>
-                <ul>
-                    <li>Javascript
-                        <ul>
-                            <li>Vanilla</li>
-                            <li>JQuery</li>
-                            <li>Node.js</li>
-                            <li>Angular</li>
-                        </ul>
-                    </li>
-                    <li>HTML5 / CSS3</li>
-                    <li>PHP / MySQL</li>
-                    <li>Github / Git</li>
-                </ul>
-                <p>
-                    Want to get a pick at my personal creations ? You can head to my <a href="http://gmartigny.github.io">Github page</a>.
-                </p>
-                <h2>Others</h2>
-                <ul>
-                    <li>Project management</li>
-                    <li>French, English</li>
-                    <li>Netbeans IDE</li>
-                </ul>
-            </article>
-            <article class="article">
-                <h1>Experiences</h1>
-                <dl>
-                    <dt>2013 - today</dt>
-                    <dd>
-                        I'm currently working at <a href="http://www.ageval.fr">Ageval Solutions<sup>(fr)</sup></a> as a web developper.<br/>
-                        My main task is to maintain and improve a web application sold to customer. I was in charge of the front-end in association with graphists.
-                        Keeping a <span title="All the way to IE8">wide range of browsers compatibility</span> and ensure good ergonomy is our main goal.
-                    </dd>
-                    <dt>2012 - 2013</dt>
-                    <dd>
-                        For a year, I worked as web developper at <a href="http://www.adoc-solutions.eu/">@doc Solutions<sup>(fr)</sup></a>.<br/>
-                        I created several web sites using Joomla from mock-ups. I also built a reservation tickets system hooked at a payment module.
-                    </dd>
-                    <dt>2013</dt>
-                    <dd>
-                        I gave a training course about Prestashop and general use of Internet and its technologies.
-                    </dd>
-                    <dt>2012</dt>
-                    <dd>
-                        Migration of the database of a project management tool at <a href="http://www.soprasteria.com/">Steria<sup>(fr)</sup></a>.
-                    </dd>
-                </dl>
-            </article>
-            <article class="article no-print">
-                <h1>Contact me</h1>
-                <p>
-                    You can send me an email at <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow">guillaume.martigny@gmail.com</a><br/>
-                    or feel free to give me a call at <a href="tel:+33660223772" itemprop="telephone" rel="nofollow">+33 6 60 22 37 72</a>
-                </p>
-                <p>
-                    If you need more informations about me, you can find my profile on :
-                </p>
-                <ul class="profiles">
-                    <li><a href="https://github.com/GMartigny"><img src="github.png" alt="Github"/></a></li>
-                    <li><a href="https://www.linkedin.com/in/guillaumemartigny"><img src="linkedin.png" alt="LinkedIn"/></a></li>
-                    <li><a href="http://www.viadeo.com/p/0021pt05dpt7l1wq"><img src="viadeo.png" alt="Viadeo"/></a></li>
-                </ul>
-            </article>
-        </main>
+        <article class="article">
+            <h1>{{about-me}}</h1>
+            <img src="res/ident.png" alt="myself" id="ident" width="120" height="120"/>
+            <div class="only-print" id="contact-infos">
+                <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow"><i class="fa fa-envelope-o"></i> guillaume.martigny@gmail.com</a><br/>
+                <a href="tel:+33660223772" itemprop="telephone" rel="nofollow"><i class="fa fa-phone"></i> +33 6 60 22 37 72</a>
+            </div>
+            <h2 itemprop="name"><br/>Guillaume<br/>Martigny</h2>
+            <p>
+                {{greetings}}
+            </p>
+            <p>
+                {{passions}}
+            </p>
+            <p>
+                {{spare}}
+            </p>
+        </article>
+        <article class="article">
+            <h1>{{learning}}</h1>
+            <dl>
+                <dt>2015</dt>
+                <dd>{{master}}</dd>
+                <dd>
+                    {{imie}}
+                    <ul>
+                        <li>{{management}}</li>
+                        <li>{{it}}</li>
+                        <li>{{modeling}}</li>
+                    </ul>
+                </dd>
+                <dt>2010</dt>
+                <dd>{{dut}}</dd>
+                <dd>
+                    {{iut}}
+                    <ul>
+                        <li>{{oop}}</li>
+                        <li>{{net-n-infra}}</li>
+                        <li>{{comm}}</li>
+                    </ul>
+                </dd>
+                <dt>2008</dt>
+                <dd>{{bac}}</dd>
+            </dl>
+        </article>
+        <article class="article">
+            <h1>{{skills}}</h1>
+            <h2>{{tech}}</h2>
+            <ul>
+                <li>Javascript
+                    <ul>
+                        <li>Vanilla</li>
+                        <li>JQuery</li>
+                        <li>Node.js</li>
+                        <li>Angular</li>
+                    </ul>
+                </li>
+                <li>HTML5 / CSS3</li>
+                <li>PHP / MySQL</li>
+                <li>Github / Git</li>
+            </ul>
+            <p>
+                {{gp-desc}} <a href="http://gmartigny.github.io">Github page</a>.
+            </p>
+            <h2>{{others}}</h2>
+            <ul>
+                <li>{{management}}</li>
+                <li>{{langs}}</li>
+                <li>{{ide}}</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h1>{{experiences}}</h1>
+            <dl>
+                <dt>2013 - {{today}}</dt>
+                <dd>
+                    {{ageval}}
+                </dd>
+                <dt>2012 - 2013</dt>
+                <dd>
+                    {{adoc}}
+                </dd>
+                <dt>2013</dt>
+                <dd>
+                    {{training}}
+                </dd>
+                <dt>2012</dt>
+                <dd>
+                    {{steria}}
+                </dd>
+            </dl>
+        </article>
+        <article class="article no-print">
+            <h1>{{contact-me}}</h1>
+            <p>
+                {{email-at}} <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow">guillaume.martigny@gmail.com</a><br/>
+                {{call-at}} <a href="tel:+33660223772" itemprop="telephone" rel="nofollow">+33 6 60 22 37 72</a>
+            </p>
+            <p>
+                {{need-more}} :
+            </p>
+            <ul class="profiles">
+                <li><a href="https://github.com/GMartigny"><img src="res/github.png" alt="Github"/></a></li>
+                <li><a href="https://www.linkedin.com/in/guillaumemartigny"><img src="res/linkedin.png" alt="LinkedIn"/></a></li>
+                <li><a href="http://www.viadeo.com/p/0021pt05dpt7l1wq"><img src="res/viadeo.png" alt="Viadeo"/></a></li>
+            </ul>
+        </article>
         <aside id="onTheRight" class="no-print">
             <div id="afix">
                 <ul id="afix-list">
                 </ul>
-                <a href="javascript:print()" id="printer"><i class="fa fa-print"></i> print</a>
+                <a href="javascript:print()" id="printer" class=""><i class="fa fa-print"></i> {{print}}</a>
+                <div id="lang-switchs">
+                    <button class="translator-switch" data-lang="en">en</button>
+                    <button class="translator-switch" data-lang="fr">fr</button>
+                </div>
             </div>
         </aside>
-        <script src="depth.min.js"></script>
+        <script src="res/translator.min.js"></script>
+        <script src="res/depth.min.js"></script>
         <script>
-            console.log("Github host");
             (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

@@ -18,7 +18,7 @@ body{
     font-size: 16px;
     color: #111;
 }
-body.ready #main .article{
+body.ready .article{
     top: 50%;
 }
 
@@ -29,14 +29,7 @@ body.ready #main .article{
     display: none;
 }
 
-#main{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-#main .article{
+.article{
     position: absolute;
     top: -100%;
     left: 0;
@@ -53,7 +46,7 @@ body.ready #main .article{
         rgba(250, 250, 250, .6) 32%, rgba(220, 230, 240, .6) 34%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
 }
-#main .article:before{
+.article:before{
     content: "";
     position: absolute;
     top: 4px;
@@ -63,7 +56,7 @@ body.ready #main .article{
     border: solid rgba(250, 250, 250, .8);
     border-width: 2px 0 0 2px;
 }
-#main .article.overflow{
+.article.overflow{
     opacity: 0;
     z-index: -1 !important;
     transition: opacity linear .3s, z-index linear 0s .3s;
@@ -162,8 +155,25 @@ aside{
     padding: 10px;
 }
 
-@media(max-width: 1290px){
-    #main .article{
+#lang-switchs{
+    text-align: center;
+    padding: 10px;
+}
+#lang-switchs .translator-switch{
+    background: none;
+    border: 1px outset #999;
+    border-radius: 5px;
+    color: #666;
+    cursor: pointer;
+    outline: none;
+}
+#lang-switchs .translator-switch.active{
+    color: #f2da4e;
+    border-color: #f2da4e;
+}
+
+@media screen AND (max-width: 1290px){
+    .article{
         width: calc(100% - 110px);
         margin-right: 110px;
     }
@@ -171,8 +181,8 @@ aside{
         right: 0;
     }
 }
-@media(max-width: 630px), (max-height: 600px){
-    body.ready #main .article{
+@media screen AND (max-width: 630px), screen AND (max-height: 600px){
+    body.ready .article{
         height: 100vh;
         margin: 0;
         top: 0;
@@ -193,10 +203,6 @@ aside{
         display: block;
     }
 
-    #main{
-        width: 18cm;
-    }
-
     #contact-infos{
         float: right;
     }
@@ -205,14 +211,17 @@ aside{
         display: none;
     }
 
-    #main .article{
+    .article{
         position: relative;
-        top: 0 !important;
-        margin: 10px 0;
+        top: auto !important;
+        margin: 15px auto 0;
         overflow: hidden;
+        width: 18cm;
         height: auto;
         opacity: 1 !important;
         transform: none !important;
+        -webkit-transform: none !important;
+        filter: blur(0px) !important;
         -webkit-filter: blur(0px) !important;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
         page-break-inside: avoid;
@@ -223,9 +232,9 @@ aside{
         margin: 1em;
     }
     .article h1{
-        font-size: 20pt;
+        font-size: 18pt;
     }
     .article h2{
-        font-size: 16pt;
+        font-size: 15pt;
     }
 }

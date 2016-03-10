@@ -1,7 +1,6 @@
 (function(){
     "use strict";
-    var main = document.getElementById("main"),
-        articles = main.getElementsByClassName("article"),
+    var articles = document.body.getElementsByClassName("article"),
         afix = document.getElementById("afix-list"),
         afix_active = null,
         depth = 0;
