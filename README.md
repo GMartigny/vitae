@@ -1,2 +1,2 @@
 # vitae
-The repo for my resumé
+The repo for my online resumé
