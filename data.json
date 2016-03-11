@@ -1,5 +1,8 @@
 {
     "en": {
+        "title": "My resumé, that's all !",
+
+
         "about-me": "About me",
 
         "greetings": "Hello, I've been a web developper for about 4 years.",
@@ -7,7 +10,7 @@
             "I'm really passionated about all of the new web technologies and I love to use them to create cool visual experiences.",
             "I also really enjoy making tools to ease other developpers life."
         ],
-        "spare": "In my spare time, I practice Capoeïra, Salsa and play video-games.",
+        "spare-time": "In my spare time, I practice Capoeïra, Salsa and play video-games.",
 
 
         "learning": "Learning",
@@ -49,7 +52,7 @@
             "For a year, I worked as web developper at <a href='http://www.adoc-solutions.eu/'>@doc Solutions<sup>(fr)</sup></a>.",
             "I created several web sites using Joomla from mock-ups. I also built a reservation tickets system hooked at a payment module."
         ],
-        "training": "I gave a training course about Prestashop and general use of Internet and its technologies.",
+        "training": "I prepared and gave a training course about Prestashop and general use of Internet and its technologies.",
         "steria": "Migration of the database of a project management tool at <a href='http://www.soprasteria.com/'>Steria<sup>(fr)</sup></a>.",
 
 
@@ -63,15 +66,17 @@
         "print": "print"
     },
     "fr": {
+        "title": "Mon CV, tout simplement !",
+
+
         "about-me": "Présentation",
 
         "greetings": "Bonjour, je travaille en tant que développeur web depuis 4 ans.",
         "passions": [
-            "Je suis passioné par toutes les nouvelles technologies web et j'aime les utiliser pour créer des expériences visuelles sympas.",
+            "Je suis passionné par toutes les nouvelles technologies web et j'aime les utiliser pour créer des expériences visuelles sympas.",
             "J'aime aussi beaucoup réaliser des outils pour faciliter la vie des développeurs."
         ],
-        "spare": "In my spare time, I practice Capoeïra, Salsa and play video-games.",
-        "spare": "Sur mon temps libre, je pratique la Capoeïra, la Salsa et joue aux jeux-vidéos.",
+        "spare-time": "Sur mon temps libre, je pratique la Capoeïra, la Salsa et joue aux jeux-vidéos.",
 
 
         "learning": "Formation",
@@ -88,12 +93,12 @@
         "net-n-infra": "Réseau et infrastructure",
         "comm": "Communication",
 
-        "bac": "Baccalauréat S Science de l'ingénieur",
+        "bac": "Baccalauréat S Sciences de l'ingénieur",
 
 
         "skills": "Compétences",
 
-        "tech": "Technique",
+        "tech": "Techniques",
         "gp-desc": "Envie d'un aperçu de mes créations personnelles ? Vous pouvez aller voir ma",
 
         "others": "Autres",
@@ -106,14 +111,14 @@
 
         "ageval": [
             "Je travaille actuellement à <a href='http://www.ageval.fr'>Ageval Solutions</a> en tant que développeur web.",
-            "Ma tâche principale est de maintenir et de faire évoluer une application web vendue à nos clients. Je suis notament en charge de l'intégration en association avec les graphistes",
-            "La compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et assurer une bonne ergonomie sont nos buts principaux."
+            "Ma tâche principale est de maintenir et de faire évoluer une application web vendue à nos clients. Je suis notamment en charge de l'intégration en association avec les graphistes",
+            "Assurer la compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et une bonne ergonomie sont nos buts principaux."
         ],
         "adoc": [
             "Pendant une année, j'ai travaillé en tant que développeur web à <a href='http://www.adoc-solutions.eu/'>@doc Solutions</a>.",
             "J'y ai créé de nombreux sites vitrine avec Joomla à partir de maquettes. J'ai aussi réalisé un système de réservation et d'impression de tickets en relation avec le module de paiement."
         ],
-        "training": "J'ai donné une formation sur Prestashop et sur l'utilisation d'Internet et ses technologies.",
+        "training": "J'ai préparé et donné une formation sur Prestashop et sur l'utilisation d'Internet et ses technologies.",
         "steria": "J'ai participé à la migration de la base de données d'un outil de gestion de projets à <a href='http://www.soprasteria.com/'>Steria</a>.",
 
 
@@ -121,7 +126,7 @@
 
         "email-at": "Vous pouvez m'envoyer un e-mail à",
         "call-at": "ou n'hésitez pas à me contacter au",
-        "need-more": "Pour encore plus d'informations sur moi, vous trouverez mon profile sur",
+        "need-more": "Pour encore plus d'informations sur moi, vous trouverez mon profil sur",
 
 
         "print": "imprimer"
