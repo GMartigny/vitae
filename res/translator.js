@@ -20,7 +20,7 @@
             console.log("Impossible to get i18n data");
         }
     };
-    request.open("GET", "data.min.json", true);
+    request.open("GET", "data.json", true);
     request.send();
 
     var switchs = document.getElementsByClassName("translator-switch"),
