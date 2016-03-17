@@ -18,7 +18,7 @@ body{
     font-size: 16px;
     color: #111;
 }
-body.ready .article{
+body.ready.translator-ready .article{
     top: 50%;
 }
 
@@ -182,7 +182,7 @@ aside{
     }
 }
 @media screen AND (max-width: 630px){
-    body.ready .article{
+    body.ready.translator-ready .article{
         height: 100vh;
         margin: 0;
         top: 0;
@@ -190,7 +190,7 @@ aside{
     }
 }
 @media  screen AND (max-height: 600px){
-    body.ready .article{
+    body.ready.translator-ready .article{
         height: 100vh;
         margin-top: 0;
         top: 0;
