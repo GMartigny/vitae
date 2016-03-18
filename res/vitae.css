@@ -201,7 +201,6 @@ aside{
 
 @media print{
     body{
-        overflow: auto;
         font-size: 12pt;
     }
 
@@ -218,6 +217,10 @@ aside{
 
     a sup{
         display: none;
+    }
+
+    #main{
+        overflow: auto;
     }
 
     #main .article{
