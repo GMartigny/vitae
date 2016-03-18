@@ -26,124 +26,126 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
-        <article class="article">
-            <h1>{{about-me}}</h1>
-            <img src="res/ident.png" alt="myself" id="ident" width="120" height="120"/>
-            <div class="only-print" id="contact-infos">
-                <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow"><i class="fa fa-envelope-o"></i> guillaume.martigny@gmail.com</a><br/>
-                <a href="tel:+33660223772" itemprop="telephone" rel="nofollow"><i class="fa fa-phone"></i> +33 6 60 22 37 72</a>
-            </div>
-            <h2 itemprop="name"><br/>Guillaume<br/>Martigny</h2>
-            <p>
-                {{greetings}}
-            </p>
-            <p>
-                {{passions}}
-            </p>
-            <p>
-                {{spare-time}}
-            </p>
-        </article>
-        <article class="article">
-            <h1>{{learning}}</h1>
-            <dl>
-                <dt>2015</dt>
-                <dd>{{master}}</dd>
-                <dd>
-                    {{imie}}
-                    <ul>
-                        <li>{{management}}</li>
-                        <li>{{it}}</li>
-                        <li>{{modeling}}</li>
-                    </ul>
-                </dd>
-                <dt>2010</dt>
-                <dd>{{dut}}</dd>
-                <dd>
-                    {{iut}}
-                    <ul>
-                        <li>{{oop}}</li>
-                        <li>{{net-n-infra}}</li>
-                        <li>{{comm}}</li>
-                    </ul>
-                </dd>
-                <dt>2008</dt>
-                <dd>{{bac}}</dd>
-            </dl>
-        </article>
-        <article class="article">
-            <h1>{{skills}}</h1>
-            <h2>{{tech}}</h2>
-            <ul>
-                <li>Javascript
-                    <ul>
-                        <li>Vanilla</li>
-                        <li>JQuery</li>
-                        <li>Node.js</li>
-                        <li>Angular</li>
-                    </ul>
-                </li>
-                <li>HTML5 / CSS3</li>
-                <li>PHP / MySQL</li>
-                <li>Github / Git</li>
-            </ul>
-            <p>
-                {{gp-desc}} <a href="https://gmartigny.github.io">Github page</a>.
-            </p>
-            <h2>{{others}}</h2>
-            <ul>
-                <li>{{management}}</li>
-                <li>{{langs}}</li>
-                <li>{{ide}}</li>
-            </ul>
-        </article>
-        <article class="article">
-            <h1>{{experiences}}</h1>
-            <dl>
-                <dt>2013 - {{today}}</dt>
-                <dd>
-                    {{ageval}}
-                </dd>
-                <dt>2012 - 2013</dt>
-                <dd>
-                    {{adoc}}
-                </dd>
-                <dt>2013</dt>
-                <dd>
-                    {{training}}
-                </dd>
-                <dt>2012</dt>
-                <dd>
-                    {{steria}}
-                </dd>
-            </dl>
-        </article>
-        <article class="article no-print">
-            <h1>{{contact-me}}</h1>
-            <p>
-                {{email-at}} <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow">guillaume.martigny@gmail.com</a><br/>
-                {{call-at}} <a href="tel:+33660223772" itemprop="telephone" rel="nofollow">+33 6 60 22 37 72</a>
-            </p>
-            <p>
-                {{need-more}} :
-            </p>
-            <ul class="profiles">
-                <li><a href="https://github.com/GMartigny"><img src="res/github.png" alt="Github"/></a></li>
-                <li><a href="https://www.linkedin.com/in/guillaumemartigny"><img src="res/linkedin.png" alt="LinkedIn"/></a></li>
-                <li><a href="https://www.viadeo.com/p/0021pt05dpt7l1wq"><img src="res/viadeo.png" alt="Viadeo"/></a></li>
-            </ul>
-        </article>
-        <aside id="onTheRight" class="no-print">
-            <div id="afix">
-                <ul id="afix-list">
-                </ul>
-                <a href="javascript:print()" id="printer" class=""><i class="fa fa-print"></i> {{print}}</a>
-                <div id="lang-switchs">
-                    <button class="translator-switch" data-lang="en">en</button>
-                    <button class="translator-switch" data-lang="fr">fr</button>
+        <main id="main">
+            <article class="article">
+                <h1>{{about-me}}</h1>
+                <img src="res/ident.png" alt="myself" id="ident" width="120" height="120"/>
+                <div class="only-print" id="contact-infos">
+                    <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow"><i class="fa fa-envelope-o"></i> guillaume.martigny@gmail.com</a><br/>
+                    <a href="tel:+33660223772" itemprop="telephone" rel="nofollow"><i class="fa fa-phone"></i> +33 6 60 22 37 72</a>
                 </div>
-            </div>
-        </aside>
+                <h2 itemprop="name"><br/>Guillaume<br/>Martigny</h2>
+                <p>
+                    {{greetings}}
+                </p>
+                <p>
+                    {{passions}}
+                </p>
+                <p>
+                    {{spare-time}}
+                </p>
+            </article>
+            <article class="article">
+                <h1>{{learning}}</h1>
+                <dl>
+                    <dt>2015</dt>
+                    <dd>{{master}}</dd>
+                    <dd>
+                        {{imie}}
+                        <ul>
+                            <li>{{management}}</li>
+                            <li>{{it}}</li>
+                            <li>{{modeling}}</li>
+                        </ul>
+                    </dd>
+                    <dt>2010</dt>
+                    <dd>{{dut}}</dd>
+                    <dd>
+                        {{iut}}
+                        <ul>
+                            <li>{{oop}}</li>
+                            <li>{{net-n-infra}}</li>
+                            <li>{{comm}}</li>
+                        </ul>
+                    </dd>
+                    <dt>2008</dt>
+                    <dd>{{bac}}</dd>
+                </dl>
+            </article>
+            <article class="article">
+                <h1>{{skills}}</h1>
+                <h2>{{tech}}</h2>
+                <ul>
+                    <li>Javascript
+                        <ul>
+                            <li>Vanilla</li>
+                            <li>JQuery</li>
+                            <li>Node.js</li>
+                            <li>Angular</li>
+                        </ul>
+                    </li>
+                    <li>HTML5 / CSS3</li>
+                    <li>PHP / MySQL</li>
+                    <li>Github / Git</li>
+                </ul>
+                <p>
+                    {{gp-desc}} <a href="https://gmartigny.github.io">Github page</a>.
+                </p>
+                <h2>{{others}}</h2>
+                <ul>
+                    <li>{{management}}</li>
+                    <li>{{langs}}</li>
+                    <li>{{ide}}</li>
+                </ul>
+            </article>
+            <article class="article">
+                <h1>{{experiences}}</h1>
+                <dl>
+                    <dt>2013 - {{today}}</dt>
+                    <dd>
+                        {{ageval}}
+                    </dd>
+                    <dt>2012 - 2013</dt>
+                    <dd>
+                        {{adoc}}
+                    </dd>
+                    <dt>2013</dt>
+                    <dd>
+                        {{training}}
+                    </dd>
+                    <dt>2012</dt>
+                    <dd>
+                        {{steria}}
+                    </dd>
+                </dl>
+            </article>
+            <article class="article no-print">
+                <h1>{{contact-me}}</h1>
+                <p>
+                    {{email-at}} <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow">guillaume.martigny@gmail.com</a><br/>
+                    {{call-at}} <a href="tel:+33660223772" itemprop="telephone" rel="nofollow">+33 6 60 22 37 72</a>
+                </p>
+                <p>
+                    {{need-more}} :
+                </p>
+                <ul class="profiles">
+                    <li><a href="https://github.com/GMartigny"><img src="res/github.png" alt="Github"/></a></li>
+                    <li><a href="https://www.linkedin.com/in/guillaumemartigny"><img src="res/linkedin.png" alt="LinkedIn"/></a></li>
+                    <li><a href="https://www.viadeo.com/p/0021pt05dpt7l1wq"><img src="res/viadeo.png" alt="Viadeo"/></a></li>
+                </ul>
+            </article>
+            <aside id="onTheRight" class="no-print">
+                <div id="afix">
+                    <ul id="afix-list">
+                    </ul>
+                    <a href="javascript:print()" id="printer" class=""><i class="fa fa-print"></i> {{print}}</a>
+                    <div id="lang-switchs">
+                        <button class="translator-switch" data-lang="en">en</button>
+                        <button class="translator-switch" data-lang="fr">fr</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
         <script src="res/translator.js"></script>
         <script src="res/depth.js"></script>
     </body>
