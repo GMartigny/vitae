@@ -73,10 +73,36 @@
 
         "greetings": "Bonjour, je travaille en tant que développeur web depuis 4 ans.",
         "passions": [
-            "Je suis passionné par toutes les nouvelles technologies web et j'aime les utiliser pour créer des expériences visuelles sympatiques.",
+            "Je suis passionné par toutes les nouvelles technologies web et j'aime les utiliser pour créer des expériences visuelles sympathiques.",
             "J'aime aussi beaucoup réaliser des outils pour faciliter la vie des développeurs."
         ],
         "spare-time": "Sur mon temps libre, je pratique la Capoeïra, la Salsa et joue aux jeux-vidéos.",
+
+
+        "experiences": "Expériences",
+        "today": "aujourd'hui",
+
+        "ageval": [
+            "Je travaille actuellement à <a href='http://www.ageval.fr'>Ageval Solutions</a> en tant que développeur web.",
+            "Ma tâche principale est de maintenir et de faire évoluer une application web vendue à nos clients. Je suis notamment en charge de l'intégration en association avec les graphistes",
+            "Assurer la compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et une bonne ergonomie sont nos buts principaux."
+        ],
+        "adoc": [
+            "Pendant une année, j'ai travaillé en tant que développeur web à <a href='http://www.adoc-solutions.eu/'>@doc Solutions</a>.",
+            "J'y ai créé de nombreux sites vitrine avec Joomla à partir de maquettes. J'ai aussi réalisé un système de réservation et d'impression de tickets en relation avec le module de paiement."
+        ],
+        "training": "J'ai préparé et donné une formation sur Prestashop et sur l'utilisation d'Internet et ses technologies.",
+        "steria": "J'ai participé à la migration de la base de données d'un outil de gestion de projets à <a href='http://www.soprasteria.com/'>Steria</a>.",
+
+
+        "skills": "Compétences",
+
+        "tech": "Techniques",
+        "gp-desc": "Envie d'un aperçu de mes créations personnelles ? Vous pouvez aller voir ma",
+
+        "others": "Autres",
+        "langs": "Français, Anglais",
+        "ide": "IDE Netbeans",
 
 
         "learning": "Formation",
@@ -94,32 +120,6 @@
         "comm": "Communication",
 
         "bac": "Baccalauréat S Sciences de l'ingénieur",
-
-
-        "skills": "Compétences",
-
-        "tech": "Techniques",
-        "gp-desc": "Envie d'un aperçu de mes créations personnelles ? Vous pouvez aller voir ma",
-
-        "others": "Autres",
-        "langs": "Français, Anglais",
-        "ide": "IDE Netbeans",
-
-
-        "experiences": "Expériences",
-        "today": "aujourd'hui",
-
-        "ageval": [
-            "Je travaille actuellement à <a href='http://www.ageval.fr'>Ageval Solutions</a> en tant que développeur web.",
-            "Ma tâche principale est de maintenir et de faire évoluer une application web vendue à nos clients. Je suis notamment en charge de l'intégration en association avec les graphistes",
-            "Assurer la compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et une bonne ergonomie sont nos buts principaux."
-        ],
-        "adoc": [
-            "Pendant une année, j'ai travaillé en tant que développeur web à <a href='http://www.adoc-solutions.eu/'>@doc Solutions</a>.",
-            "J'y ai créé de nombreux sites vitrine avec Joomla à partir de maquettes. J'ai aussi réalisé un système de réservation et d'impression de tickets en relation avec le module de paiement."
-        ],
-        "training": "J'ai préparé et donné une formation sur Prestashop et sur l'utilisation d'Internet et ses technologies.",
-        "steria": "J'ai participé à la migration de la base de données d'un outil de gestion de projets à <a href='http://www.soprasteria.com/'>Steria</a>.",
 
 
         "contact-me": "Contactez moi",
