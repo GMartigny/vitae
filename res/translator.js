@@ -2,9 +2,26 @@
 
     var self = this;
 
+    function recursiveReplace(element, regexp, replacementText){
+        // text node, replace content
+        var content = element.textContent.trim();
+        if(element.nodeType === 3 && content != "" && regexp.test(content)){
+            var tempHolder = document.createElement("div");
+            tempHolder.innerHTML = content.replace(regexp, replacementText);
+            element.parentNode.insertBefore(tempHolder.firstChild, element);
+            element.remove();
+        }
+        // element node, finds children and recursive call
+        else if(element.nodeType === 1){
+            var children = element.childNodes;
+            [].forEach.call(children, function(child){
+                recursiveReplace(child, regexp, replacementText);
+            });
+        }
+    }
+
     // prepare html for translation
-    var html = document.body.innerHTML;
-    document.body.innerHTML = html.replace(/{{(.+?)}}/g, '<span class="translator" data-translator-key="$1"></span>');
+    recursiveReplace(document.documentElement, /{{(.+?)}}/g, '<span class="translator" data-translator-key="$1"></span>');
 
     // get lang from localStorage then from navigator and fallback to "en"
     this.lang = localStorage.getItem("lang") || navigator.language.split("-")[0] || "en";
