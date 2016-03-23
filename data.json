@@ -17,7 +17,7 @@
         "today": "today",
 
         "ageval": [
-            "I'm currently working at <a href='http://www.ageval.fr'>Ageval Solutions<sup>(fr)</sup></a> as a web developper.",
+            "I'm currently working at <a href='http://www.ageval.fr' itemprop='worksFor'>Ageval Solutions<sup>(fr)</sup></a> as a web developper.",
             "My main task is to maintain and improve a web application sold to customer. I'm in charge of the front-end in association with graphists.",
             "Keeping a <span title='All the way to IE8'>wide range of browsers compatibility</span> and ensure good ergonomy are our main goals."
         ],
@@ -83,7 +83,7 @@
         "today": "aujourd'hui",
 
         "ageval": [
-            "Je travaille actuellement à <a href='http://www.ageval.fr'>Ageval Solutions</a> en tant que développeur web.",
+            "Je travaille actuellement à <a href='http://www.ageval.fr' itemprop='worksFor'>Ageval Solutions</a> en tant que développeur web.",
             "Ma tâche principale est de maintenir et de faire évoluer une application web vendue à nos clients. Je suis notamment en charge de l'intégration en association avec les graphistes",
             "Assurer la compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et une bonne ergonomie sont nos buts principaux."
         ],
