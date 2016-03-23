@@ -2,26 +2,27 @@
 
     var self = this;
 
-    function recursiveReplace(element, regexp, replacementText){
+    this.DOUBLE_BRACE_REGEXP = /{{(.+?)}}/g;
+    this.DATA_WRAPPER = '<span class="translator" data-translator-key="$1"></span>';
+
+    function recursiveReplaceDoubleBrace(element){
         // text node, replace content
         var content = element.textContent.trim();
-        if(element.nodeType === 3 && content != "" && regexp.test(content)){
+        if(element.nodeType === 3 && content != "" && self.DOUBLE_BRACE_REGEXP.test(content)){
             var tempHolder = document.createElement("div");
-            tempHolder.innerHTML = content.replace(regexp, replacementText);
+            tempHolder.innerHTML = content.replace(self.DOUBLE_BRACE_REGEXP, self.DATA_WRAPPER);
             element.parentNode.insertBefore(tempHolder.firstChild, element);
             element.remove();
         }
         // element node, finds children and recursive call
         else if(element.nodeType === 1){
             var children = element.childNodes;
-            [].forEach.call(children, function(child){
-                recursiveReplace(child, regexp, replacementText);
-            });
+            [].forEach.call(children, recursiveReplaceDoubleBrace);
         }
     }
 
     // prepare html for translation
-    recursiveReplace(document.documentElement, /{{(.+?)}}/g, '<span class="translator" data-translator-key="$1"></span>');
+    recursiveReplaceDoubleBrace(document.documentElement);
 
     // get lang from localStorage then from navigator and fallback to "en"
     this.lang = localStorage.getItem("lang") || navigator.language.split("-")[0] || "en";
