@@ -28,7 +28,7 @@
     <body>
         <main id="main">
             <article class="article">
-                <h1>{{about-me}}</h1>
+                <h1>-{{about-me}}-</h1>
                 <img src="res/ident.png" alt="myself" id="ident" width="120" height="120" itemprop="image"/>
                 <div class="only-print" id="contact-infos">
                     <a href="mailto:guillaume.martigny@gmail.com" rel="nofollow"><i class="fa fa-envelope-o"></i> guillaume.martigny@gmail.com</a><br/>
@@ -138,7 +138,7 @@
                 <div id="afix">
                     <ul id="afix-list">
                     </ul>
-                    <!--<a href="javascript:print()" id="printer" class=""><i class="fa fa-print"></i> {{print}}</a>-->
+                    <a href="" id="printer"><i class="fa fa-print"></i> {{print}}</a>
                     <div id="lang-switchs">
                         <button class="translator-switch" data-lang="en">en</button>
                         <button class="translator-switch" data-lang="fr">fr</button>
@@ -147,6 +147,15 @@
             </aside>
         </main>
         <script src="res/translator.js"></script>
+        <script>
+            new Translator("data.json", {
+                persists: true,
+                switchesClass: "translator-switch",
+                onSwitchLang: function(lang){
+                    document.getElementById("printer").href = "doc/CV " + lang + " - Guillaume Martigny.pdf";
+                }
+            });
+        </script>
         <script src="res/depth.js"></script>
     </body>
 </html>

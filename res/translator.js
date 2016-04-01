@@ -1,81 +1,129 @@
-(function(){
+function Translator(jsonDataURL, options){
+    if(typeof jsonDataURL != "string" || !jsonDataURL.length)
+        throw new TypeError("First parameter should be a non empty string");
+    this.jsonDataURL = jsonDataURL;
 
-    var self = this;
+    this.options = options || {};
+    if(!this.options.activeSwitchClass)
+        this.options.activeSwitchClass = "translator-active";
 
-    this.DOUBLE_BRACE_REGEXP = /{{(.+?)}}/g;
-    this.DATA_WRAPPER = '<span class="translator" data-translator-key="$1"></span>';
+    // get lang from localStorage then from navigator and fallback to "en"
+    this.lang = (this.options.persists && localStorage.getItem("lang")) || navigator.language.split("-")[0] || "en";
 
-    function recursiveReplaceDoubleBrace(element){
+    if(this.options.switchesClass)
+        this.activateSwitches(this.options.switchesClass);
+
+    // prepare <html> for translation
+    this._recursiveReplaceDoubleBrace(document.documentElement);
+
+    // formated i18n data
+    this.data = {};
+    this._retreiveData(this.jsonDataURL);
+
+}
+Translator.DOUBLE_BRACE_REGEXP = /{{(.+?)}}/g;
+Translator.DATA_WRAPPER = '<span class="translator" data-translator-key="$1"></span>';
+Translator.UNREACHABLE_DATA = "Can't reach data";
+Translator.UNPARSABLE_DATA = "Can't parse data";
+Translator.prototype = {
+    /**
+     * Browse DOM and replace double-brace with HTML tag
+     * @param {HTMLElement} element The base element
+     * @returns {Translator} Itself for chainning
+     */
+    _recursiveReplaceDoubleBrace: function(element){
+        var content = element.textContent;
         // text node, replace content
-        var content = element.textContent.trim();
-        if(element.nodeType === 3 && content != "" && self.DOUBLE_BRACE_REGEXP.test(content)){
+        if(element.nodeType === 3 && content.trim() != "" && Translator.DOUBLE_BRACE_REGEXP.test(content)){
             var tempHolder = document.createElement("div");
-            tempHolder.innerHTML = content.replace(self.DOUBLE_BRACE_REGEXP, self.DATA_WRAPPER);
-            element.parentNode.insertBefore(tempHolder.firstChild, element);
+            tempHolder.innerHTML = content.replace(Translator.DOUBLE_BRACE_REGEXP, Translator.DATA_WRAPPER);
+            while(tempHolder.childNodes.length){
+                element.parentNode.insertBefore(tempHolder.firstChild, element);
+            }
             element.remove();
         }
         // element node, finds children and recursive call
         else if(element.nodeType === 1){
             var children = element.childNodes;
-            [].forEach.call(children, recursiveReplaceDoubleBrace);
+            [].forEach.call(children,
+                proxy(this._recursiveReplaceDoubleBrace, this));
         }
-    }
-
-    // prepare html for translation
-    recursiveReplaceDoubleBrace(document.documentElement);
-
-    // get lang from localStorage then from navigator and fallback to "en"
-    this.lang = localStorage.getItem("lang") || navigator.language.split("-")[0] || "en";
-
-    this.data = {};
-
-    // AJAX request for data
-    var request = new XMLHttpRequest();
-    request.onload = function(){
-        try{
-            self.data = JSON.parse(this.responseText);
-            self.translateTo();
+        return this;
+    },
+    /**
+     * Async get json data from server
+     * @returns {Translator} Itself for chainning
+     */
+    _retreiveData: function(jsonDataURL){
+        var request = new XMLHttpRequest();
+        request.onload = proxy(function(){
+            try{
+                this.data = JSON.parse(request.responseText);
+                this.translateTo(this.lang);
+            }
+            catch(e){
+                if(this.options.onDataError)
+                    this.options.onDataError.call(this, Translator.UNPARSABLE_DATA);
+                else
+                    console.log(Translator.UNPARSABLE_DATA);
+            }
+        }, this);
+        request.onerror = proxy(function(){
+            if(this.options.onDataError)
+                this.options.onDataError.call(this, Translator.UNREACHABLE_DATA);
+            else
+                console.log(Translator.UNREACHABLE_DATA);
+        }, this);
+        request.open("GET", jsonDataURL, true);
+        request.send();
+    },
+    /**
+     * Add click listener to change lang
+     * @param {String} classe A className for switch elements
+     * @returns {Translator} Itself for chainning
+     */
+    activateSwitches: function(classe){
+        var self = this,
+            switchs = document.getElementsByClassName(classe),
+            i = switchs.length,
+            el;
+        while(el = switchs[--i]){
+            el.addEventListener("click", proxy(function(event){
+                var element = event.target;
+                this.translateTo(element.dataset.lang);
+                var activeSwitch = document.getElementsByClassName(classe + " " + this.options.activeSwitchClass)[0];
+                if(activeSwitch)
+                    activeSwitch.classList.remove(this.options.activeSwitchClass);
+                element.classList.add(this.options.activeSwitchClass);
+            }, this));
+            if(el.dataset.lang == this.lang){
+                el.classList.add(this.options.activeSwitchClass);
+            }
         }
-        catch(e){
-            console.log("Impossible to get i18n data");
-        }
-    };
-    request.open("GET", "data.json", true);
-    request.send();
-
-    // activate switches
-    var switchs = document.getElementsByClassName("translator-switch"),
-    i = switchs.length, el;
-    while(el = switchs[--i]){
-        el.addEventListener("click", function(){
-            self.translateTo(this.dataset.lang);
-            document.getElementsByClassName("translator-switch active")[0].classList.remove("active");
-            this.classList.add("active");
-        });
-        if(el.dataset.lang == this.lang){
-            el.classList.add("active");
-        }
-    }
-
+        return this;
+    },
     /**
      * Update page to new language
-     * @param {String} lang The selected language
-     * @returns {Translator} Itself
+     * @param {String} [] lang The selected language
+     * @returns {Translator} Itself for chainning
      */
-    this.translateTo = function(lang){
-        var lang = lang || this.lang;
+    translateTo: function(lang){
+        lang = lang || this.lang;
         document.body.classList.remove("translator-ready");
 
         this.lang = lang;
         document.documentElement.lang = lang;
-        localStorage.setItem("lang", lang);
+        if(this.options.persists)
+            localStorage.setItem("lang", lang);
 
-        var strings = document.getElementsByClassName("translator"),
-            i = strings.length,
-            data = this.data[lang], el, str;
+        var target = document.getElementsByClassName("translator"),
+            i = target.length,
+            data = this.data[lang],
+            el,
+            str;
 
         // crawl page
-        while(el = strings[--i]){
+        while(el = target[--i]){
             str = data[el.dataset.translatorKey];
 
             if(str instanceof Array)
@@ -83,7 +131,16 @@
             el.innerHTML = str? str: el.dataset.translatorKey;
         }
 
+        if(this.options.onSwitchLang)
+            this.options.onSwitchLang.call(this, this.lang);
+
         document.body.classList.add("translator-ready");
         return this;
+    }
+};
+
+function proxy(func, self){
+    return function(){
+        func.apply(self, arguments);
     };
-})();
+}

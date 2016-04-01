@@ -25,8 +25,8 @@
             "For a year, I worked as web developper at <a href='http://www.adoc-solutions.eu/'>@doc Solutions<sup>(fr)</sup></a>.",
             "I created several web sites using Joomla from mock-ups. I also built a reservation tickets system hooked at a payment module."
         ],
-        "training": "I prepared and gave a training course about Prestashop and general use of Internet and its technologies.",
-        "steria": "Migration of the database of a project management tool at <a href='http://www.soprasteria.com/'>Steria<sup>(fr)</sup></a>.",
+        "training": "I prepared and gave a training course about Prestashop and general use of Internet and its technologies at <a href='http://imie-ecole-informatique.fr/'>IMIE Nantes<sup>(fr)</sup></a>.",
+        "steria": "I participated in the migration of the database of a project management tool at <a href='http://www.soprasteria.com/'>Steria<sup>(fr)</sup></a>.",
 
 
         "skills": "Skills",
@@ -36,7 +36,7 @@
 
         "others": "Others",
         "langs": "French, English",
-        "ide": "Netbeans IDE",
+        "ide": "Netbeans IDE and Photoshop",
 
 
         "learning": "Learning",
@@ -91,7 +91,7 @@
             "Pendant une année, j'ai travaillé en tant que développeur web à <a href='http://www.adoc-solutions.eu/'>@doc Solutions</a>.",
             "J'y ai créé de nombreux sites vitrine avec Joomla à partir de maquettes. J'ai aussi réalisé un système de réservation et d'impression de tickets en relation avec le module de paiement."
         ],
-        "training": "J'ai préparé et donné une formation sur Prestashop et sur l'utilisation d'Internet et ses technologies.",
+        "training": "J'ai préparé et donné une formation sur Prestashop et sur l'utilisation d'Internet et ses technologies pour le compte d'<a href='http://imie-ecole-informatique.fr/'>IMIE Nantes</a>.",
         "steria": "J'ai participé à la migration de la base de données d'un outil de gestion de projets à <a href='http://www.soprasteria.com/'>Steria</a>.",
 
 
@@ -102,7 +102,7 @@
 
         "others": "Autres",
         "langs": "Français, Anglais",
-        "ide": "IDE Netbeans",
+        "ide": "Netbeans IDE et Photoshop",
 
 
         "learning": "Formation",

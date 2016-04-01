@@ -168,7 +168,7 @@ aside{
     cursor: pointer;
     outline: none;
 }
-#lang-switchs .translator-switch.active{
+#lang-switchs .translator-switch.translator-active{
     color: #f2da4e;
     border-color: #f2da4e;
 }
@@ -229,7 +229,7 @@ aside{
         margin: 15px auto 0;
         overflow: hidden;
         width: 18cm;
-        height: auto;
+        height: auto !important;
         opacity: 1 !important;
         transform: none !important;
         -webkit-transform: none !important;
