@@ -13,8 +13,10 @@ function Translator(jsonDataURL, options){
     if(this.options.switchesClass)
         this.activateSwitches(this.options.switchesClass);
 
-    // prepare <html> for translation
+    // prepare DOM for translation
     this._recursiveReplaceDoubleBrace(document.documentElement);
+    if(this.options.onDOMReady)
+        this.options.onDOMReady.call(this);
 
     // formated i18n data
     this.data = {};
@@ -44,9 +46,10 @@ Translator.prototype = {
         }
         // element node, finds children and recursive call
         else if(element.nodeType === 1){
-            var children = element.childNodes;
-            [].forEach.call(children,
-                proxy(this._recursiveReplaceDoubleBrace, this));
+            var children = element.childNodes,
+                i = children.length;
+            while(children[--i])
+                this._recursiveReplaceDoubleBrace.call(this, children[i]);
         }
         return this;
     },
@@ -83,8 +86,7 @@ Translator.prototype = {
      * @returns {Translator} Itself for chainning
      */
     activateSwitches: function(classe){
-        var self = this,
-            switchs = document.getElementsByClassName(classe),
+        var switchs = document.getElementsByClassName(classe),
             i = switchs.length,
             el;
         while(el = switchs[--i]){
