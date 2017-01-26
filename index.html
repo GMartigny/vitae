@@ -4,6 +4,8 @@
         <title class="translator" data-translator-key="title"></title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="alternate" hreflang="en" href="https://www.guillaume-martigny.fr/#en" />
+        <link rel="alternate" hreflang="fr" href="https://www.guillaume-martigny.fr/#fr" />
 
         <meta itemprop="jobTitle" content="web developper"/>
 
@@ -130,8 +132,13 @@
         </main>
         <script src="res/translator.js"></script>
         <script>
+            /**
+             * House-made dynamic translation tool
+             * @see {@link https://github.com/GMartigny/vitae/blob/master/res/translator.js|GitHub}
+             */
             new Translator("data.json", {
                 persists: true,
+                lang: location.hash.substr(1),
                 switchesClass: "translator-switch",
                 onSwitchLang: function(lang){
                     document.getElementById("printer").href = "doc/CV " + lang + " - Guillaume Martigny.pdf";

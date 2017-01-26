@@ -176,7 +176,7 @@ aside{
 @media screen AND (max-width: 1320px){
     .article{
         width: calc(100% - 120px);
-        margin: 0;
+        margin: -300px 0 0;
     }
     #onTheRight{
         right: 0;
