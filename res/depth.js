@@ -2,16 +2,21 @@
     "use strict";
     var articles = document.body.getElementsByClassName("article"),
         afix = document.getElementById("afix-list"),
-        afix_active = null,
         depth = 0;
 
-    for(var i=0, l=articles.length; i < l; ++i){
-        var article = articles[i],
-            li = document.createElement("li");
+    function allArticles (action) {
+        for (var i = 0, l = articles.length; i < l; ++i) {
+            action(articles[i], i, l);
+        }
+    }
+
+    allArticles(function (article, i, l) {
+        var li = document.createElement("li");
 
         li.innerHTML = article.getElementsByTagName("h1")[0].innerHTML;
         li.addEventListener("click", (function(dest){
             return function(){
+                updateAfix(dest);
                 jumpTo(dest);
             };
         })(i));
@@ -20,9 +25,11 @@
 
         article.style.zIndex = l - i;
         article.style.transitionDelay = "0s, 0." + (l - i) + "s";
-    }
+    });
 
     window.addEventListener("wheel", function(e){
+        e.preventDefault();
+        e.stopPropagation();
         if(!loopTimer){
             var dir = (e.deltaY<0 ? -1 : 1);
             depth = parseFloat((depth + dir*0.2).toFixed(3));
@@ -31,59 +38,48 @@
             else if(depth > articles.length - 1)
                 depth = articles.length - 1;
             simulateDepth();
-            updateAfix();
+            updateAfix(depth);
         }
-    });
+    }, true);
 
-    updateAfix();
+    updateAfix(depth);
     simulateDepth();
     setTimeout(function(){
         document.body.classList.add("ready");
     }, 0);
 
     function simulateDepth(){
-        for(var i = 0, l = articles.length; i < l; ++i){
-            var article = articles[i],
-                scale = "scale(" + (1 / Math.pow(2, (i - depth))) + ")",
-                blur = "blur(" + ((i - depth) * 2.5) + "px)";
-            article.style.transform = scale;
-            article.style.WebkitTransform = scale;
-            article.style.filter = blur;
-            article.style.WebkitFilter = blur;
+        allArticles(function (article, i) {
+            var scale = 1 / Math.pow(2, (i - depth)),
+                blur = Math.max((i - depth) * 2.5 - 1, 0);
+            article.style.transform = "scale3d(" + scale + ", " + scale + ", " + scale + ")";
+            article.style.filter = "blur(" + blur + "px)";
 
             if(depth-0.5 > i)
                 article.classList.add("overflow");
             else
                 article.classList.remove("overflow");
-        }
+        });
     }
 
     var loopTimer = 0;
     function jumpTo(dest){
-        if(loopTimer)
-            clearTimeout(loopTimer);
-
-        var diff = parseFloat(((dest - depth) / 10).toFixed(3));
-
-        if(diff){
-            depth += diff;
-            loopTimer = setTimeout(function(){
-                loopTimer = 0;
-                jumpTo(dest);
-            }, 16);
-        }
-        else{
+        var time = (dest - depth) * 300;
+        if (time) {
+            allArticles(function (article) {
+                article.style.transitionDuration = ".3s, 0s, " + time + "ms";
+            });
             depth = dest;
+            simulateDepth();
+            setTimeout(function () {
+                allArticles(function (article) {
+                    article.style.transitionDuration = "";
+                });
+            }, time);
         }
-        updateAfix();
-        simulateDepth();
     }
 
-    function updateAfix(){
-        var lis = afix.getElementsByTagName("li");
-        if(afix_active)
-            afix_active.classList.remove("active");
-        afix_active = lis[(depth + 0.5) << 0];
-        lis[(depth + 0.5) << 0].classList.add("active");
+    function updateAfix(dest){
+        afix.className = "sel-" + (dest + 0.5 <<0);
     }
 })();

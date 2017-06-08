@@ -16,10 +16,15 @@
         "experiences": "Experiences",
         "today": "today",
 
+        "wiztivi": [
+            "I'm currently working at <a href='https://www.wiztivi.com/' itemprop='worksFor'>Wizitiv</a> as a UI developer.",
+            "In a 14 people team, we are in charge of the Vodafone's TV box, the current biggest project.",
+            "Spanning across 5 countries around the world, I use the internal SDK to build all the UI's modules. The main challenge being to keep performance with the limited STB's resources."
+        ],
         "ageval": [
-            "I'm currently working at <a href='http://www.ageval.fr' itemprop='worksFor'>Ageval Solutions<sup>(fr)</sup></a> as a web developer.",
-            "My main task is to maintain and improve a web application sold to customer. I'm in charge of the front-end in association with graphists.",
-            "Keeping a <span title='All the way to IE8'>wide range of browsers compatibility</span> and ensure good ergonomy are our main goals."
+            "I spend nearly 3 years at <a href='http://www.ageval.fr' itemprop='worksFor'>Ageval Solutions<sup>(fr)</sup></a> as a web developer.",
+            "My main task is to maintain and improve a web application sold to customers. I was moslty in charge of the front-end in association with graphic designers.",
+            "Keeping a <span title='All the way to IE8'>wide range of browsers compatibility</span> and ensure perfect ergonomy were my main goals."
         ],
         "adoc": [
             "For a year, I worked as web developer at <a href='http://www.adoc-solutions.eu/'>@doc Solutions<sup>(fr)</sup></a>.",
@@ -42,7 +47,7 @@
         "learning": "Learning",
 
         "master": "Level I Engineer on IT project management",
-        "imie": "At <a href='http://www.imie-ecole-informatique.fr/'>IMIE Nantes<sup>(fr)</sup></a> (4 years course)",
+        "imie": "At <a href='http://www.imie-ecole-informatique.fr/'>IMIE Nantes<sup>(fr)</sup></a> (4 years course with alternating forming)",
         "management": "Project management",
         "it": "Global IT knowledge",
         "modeling": "Modeling techniques",
@@ -82,10 +87,15 @@
         "experiences": "Expériences",
         "today": "aujourd'hui",
 
+        "wiztivi": [
+            "Je travaille actuellement à <a href='https://www.wiztivi.com/' itemprop='worksFor'>Wizitiv<sup>(en)</sup></a> comme développeur UI.",
+            "Dans une équipe de 14 personnes, nous sommes en charge de la box TV de Vodafone, le plus gros projet de l'entreprise.",
+            "Réparti sur 5 pays autour du globe, j'utilise le SDK interne pour construire les différents modules de l'interface. Le défi principal étant d'obtenir de bonne performance avec les ressources limitées de la STB."
+        ],
         "ageval": [
-            "Je travaille actuellement à <a href='http://www.ageval.fr' itemprop='worksFor'>Ageval Solutions</a> en tant que développeur web.",
-            "Ma tâche principale est de maintenir et de faire évoluer une application web vendue à nos clients. Je suis notamment en charge de l'intégration en association avec les graphistes",
-            "Assurer la compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et une bonne ergonomie sont nos buts principaux."
+            "J'ai passé presque 3ans à <a href='http://www.ageval.fr' itemprop='worksFor'>Ageval Solutions</a> en tant que développeur web.",
+            "Ma tâche principale était de maintenir et de faire évoluer une application web vendue à nos clients. J'étais notamment en charge de l'intégration en association avec les graphistes.",
+            "Assurer la compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et une parfaite ergonomie étaient mes principaux buts."
         ],
         "adoc": [
             "Pendant une année, j'ai travaillé en tant que développeur web à <a href='http://www.adoc-solutions.eu/'>@doc Solutions</a>.",
@@ -108,7 +118,7 @@
         "learning": "Formation",
 
         "master": "Ingénieur niveau I en management de projets informatiques",
-        "imie": "&Agrave; <a href='http://www.imie-ecole-informatique.fr/'>IMIE Nantes</a> (4 ans de formation)",
+        "imie": "&Agrave; <a href='http://www.imie-ecole-informatique.fr/'>IMIE Nantes</a> (4 ans de formation en alternance)",
         "management": "Management de projet",
         "it": "Connaissances informatiques générales",
         "modeling": "Techniques de modélisation",
@@ -122,7 +132,7 @@
         "bac": "Baccalauréat S Sciences de l'ingénieur",
 
 
-        "contact-me": "Contactez moi",
+        "contact-me": "Contacts",
 
         "email-at": "Vous pouvez m'envoyer un e-mail à",
         "call-at": "ou n'hésitez pas à me contacter au",

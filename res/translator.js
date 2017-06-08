@@ -75,7 +75,7 @@ Translator.prototype = {
      */
     _retrieveData: function(jsonDataURL) {
         var request = new XMLHttpRequest();
-        request.onload = proxy(function() {
+        request.onload = function() {
             try {
                 this.data = JSON.parse(request.responseText);
                 this.translateTo(this.lang);
@@ -87,14 +87,14 @@ Translator.prototype = {
                     console.log(Translator.UNPARSABLE_DATA);
                 }
             }
-        }, this);
-        request.onerror = proxy(function() {
+        }.bind(this);
+        request.onerror = function() {
             if (this.options.onDataError) {
                 this.options.onDataError.call(this, Translator.UNREACHABLE_DATA);
             } else {
                 console.log(Translator.UNREACHABLE_DATA);
             }
-        }, this);
+        }.bind(this);
         request.open("GET", jsonDataURL, true);
         request.send();
     },
@@ -109,10 +109,10 @@ Translator.prototype = {
             el,
             map = {};
         while (el = switches[--i]) {
-            el.addEventListener("click", proxy(function(event) {
+            el.addEventListener("click", function(event) {
                 var element = event.target;
                 this.translateTo(element.dataset.lang);
-            }, this));
+            }.bind(this));
             map[el.dataset.lang] = el;
         }
         return map;
@@ -179,9 +179,3 @@ Translator.prototype = {
         return this;
     }
 };
-
-function proxy (func, self) {
-    return function() {
-        func.apply(self, arguments);
-    };
-}

@@ -40,7 +40,7 @@ body.ready.translator-ready .article{
     line-height: 1.5em;
     padding: 0 30px;
     opacity: 1;
-    transition: opacity linear .3s 0s, top ease-out .5s;
+    transition: opacity linear .3s, top ease-out .5s, transform ease-out .3s;
     background: linear-gradient(120deg,
         rgba(220, 230, 240, .6) 0, rgba(220, 230, 240, .6) 15%, rgba(250, 250, 250, .7) 20%, rgba(220, 230, 240, .6) 30%,
         rgba(250, 250, 250, .6) 32%, rgba(220, 230, 240, .6) 34%);
@@ -59,7 +59,7 @@ body.ready.translator-ready .article{
 .article.overflow{
     opacity: 0;
     z-index: -1 !important;
-    transition: opacity linear .3s, z-index linear 0s .3s;
+    transition: opacity linear .3s, top ease-out 0s, transform ease-out .3s, z-index linear 0s .3s;
 }
 
 .article h1, .article h2{
@@ -143,12 +143,37 @@ aside{
     padding: 0;
     list-style: none;
 }
+#afix-list:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 3px;
+    height: calc(1em + 22px);
+    background-color: #333;
+    transition: transform ease-out .3s;
+}
+#afix-list.sel-0:after {
+    transform: translate3d(0, 0, 0);
+}
+#afix-list.sel-1:after {
+    transform: translate3d(0, calc(1em + 22px), 0);
+}
+#afix-list.sel-2:after {
+    transform: translate3d(0, calc((1em + 22px) * 2), 0);
+}
+#afix-list.sel-3:after {
+    transform: translate3d(0, calc((1em + 22px) * 3), 0);
+}
+#afix-list.sel-4:after {
+    transform: translate3d(0, calc((1em + 22px) * 4), 0);
+}
+#afix-list.sel-5:after {
+    transform: translate3d(0, calc((1em + 22px) * 5), 0);
+}
 #afix-list li{
     padding: 10px;
     cursor: pointer;
-}
-#afix-list li.active{
-    border-left: 3px solid #333;
 }
 
 #printer{
