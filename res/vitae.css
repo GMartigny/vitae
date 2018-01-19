@@ -197,7 +197,7 @@ aside{
     color: #f2da4e;
     border-color: #f2da4e;
 }
-
+/* Use full width */
 @media screen AND (max-width: 1320px){
     .article{
         width: calc(100% - 120px);
@@ -207,15 +207,15 @@ aside{
         right: 0;
     }
 }
-@media screen AND (max-width: 630px){
+/* Add 200px to height */
+@media screen AND (max-width: 1045px){
     body.ready.translator-ready .article{
-        height: 100vh;
-        margin: 0;
-        top: 0;
-        overflow: auto;
+        height: 800px;
+        margin: -400px 0 0;
     }
 }
-@media  screen AND (max-height: 600px){
+/* Use full height */
+@media screen AND (max-height: 800px), screen AND (max-width: 640px){
     body.ready.translator-ready .article{
         height: 100vh;
         margin-top: 0;
@@ -245,15 +245,16 @@ aside{
     }
 
     #main{
+        height: auto;
         overflow: auto;
     }
 
     #main .article{
         position: relative;
         top: 0 !important;
-        margin: 15px auto 0;
+        margin: 0 auto 15px;
         overflow: hidden;
-        width: 18cm;
+        width: 18.6cm;
         height: auto !important;
         opacity: 1 !important;
         transform: none !important;
