@@ -1,0 +1,50 @@
+body{
+    font-size: 12pt;
+}
+
+.no-print{
+    display: none;
+}
+.only-print{
+    display: block;
+}
+
+#contact-infos{
+    float: right;
+}
+
+a sup{
+    display: none;
+}
+
+#main{
+    height: auto;
+    overflow: auto;
+}
+
+#main .article{
+    position: relative;
+    top: 0 !important;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    width: 18.6cm;
+    height: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    filter: blur(0px) !important;
+    -webkit-filter: blur(0px) !important;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
+    page-break-inside: avoid;
+    z-index: 1 !important;
+}
+
+.article h1, .article h2{
+    margin: 1em;
+}
+.article h1{
+    font-size: 18pt;
+}
+.article h2{
+    font-size: 15pt;
+}
