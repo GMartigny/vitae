@@ -133,17 +133,17 @@ aside{
     text-align: right;
     width: 120px;
 }
-#afix{
+#affix{
     display: table-cell;
     vertical-align: middle;
     z-index: 100;
 }
-#afix-list{
+#affix-list{
     margin: 0;
     padding: 0;
     list-style: none;
 }
-#afix-list:after {
+#affix-list:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -153,25 +153,25 @@ aside{
     background-color: #333;
     transition: transform ease-out .3s;
 }
-#afix-list.sel-0:after {
+#affix-list.sel-0:after {
     transform: translate3d(0, 0, 0);
 }
-#afix-list.sel-1:after {
+#affix-list.sel-1:after {
     transform: translate3d(0, calc(1em + 22px), 0);
 }
-#afix-list.sel-2:after {
+#affix-list.sel-2:after {
     transform: translate3d(0, calc((1em + 22px) * 2), 0);
 }
-#afix-list.sel-3:after {
+#affix-list.sel-3:after {
     transform: translate3d(0, calc((1em + 22px) * 3), 0);
 }
-#afix-list.sel-4:after {
+#affix-list.sel-4:after {
     transform: translate3d(0, calc((1em + 22px) * 4), 0);
 }
-#afix-list.sel-5:after {
+#affix-list.sel-5:after {
     transform: translate3d(0, calc((1em + 22px) * 5), 0);
 }
-#afix-list li{
+#affix-list li{
     padding: 10px;
     cursor: pointer;
 }
@@ -181,11 +181,11 @@ aside{
     padding: 10px;
 }
 
-#lang-switchs{
+#lang-switches{
     text-align: center;
     padding: 10px;
 }
-#lang-switchs .translator-switch{
+#lang-switches .translator-switch{
     background: none;
     border: 1px outset #999;
     border-radius: 5px;
@@ -193,7 +193,7 @@ aside{
     cursor: pointer;
     outline: none;
 }
-#lang-switchs .translator-switch.translator-active{
+#lang-switches .translator-switch.translator-active{
     color: #f2da4e;
     border-color: #f2da4e;
 }
