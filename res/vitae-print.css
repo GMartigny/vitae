@@ -31,9 +31,7 @@ a sup{
     height: auto !important;
     opacity: 1 !important;
     transform: none !important;
-    -webkit-transform: none !important;
     filter: blur(0px) !important;
-    -webkit-filter: blur(0px) !important;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .3);
     page-break-inside: avoid;
     z-index: 1 !important;
