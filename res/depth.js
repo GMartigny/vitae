@@ -28,8 +28,6 @@
     });
 
     window.addEventListener("wheel", function(e){
-        e.preventDefault();
-        e.stopPropagation();
         if(!loopTimer){
             var dir = (e.deltaY<0 ? -1 : 1);
             depth = parseFloat((depth + dir*0.2).toFixed(3));
@@ -40,7 +38,10 @@
             simulateDepth();
             updateAfix(depth);
         }
-    }, true);
+    }, {
+        capture: true,
+        passive: true,
+    });
 
     updateAfix(depth);
     simulateDepth();
