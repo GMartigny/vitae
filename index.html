@@ -30,19 +30,21 @@
     <body>
         <main id="main">
             <article class="article">
-                <h1>{{about-me}}</h1>
-                <img src="res/ident.jpg" alt="myself" id="ident" width="120" height="120" itemprop="image"/>
+                <h1 class="only-print">{{about-me}}</h1>
                 <div class="only-print" id="contact-infos">
                     <a href="mailto:guillaume.martigny@gmail.com" rel="nofollow"><i class="fa fa-envelope-o"></i> guillaume.martigny@gmail.com</a><br/>
                     <a href="tel:+33660223772" rel="nofollow"><i class="fa fa-phone"></i> +33 6 60 22 37 72</a>
                 </div>
-                <h2 itemprop="name"><br/>Guillaume<br/>Martigny</h2>
+                <h2 itemprop="name">
+                    <img src="res/ident.jpg" alt="myself" id="ident" width="120" height="120" itemprop="image"/>
+                    Guillaume Martigny
+                </h2>
                 <p>{{greetings}}</p>
                 <p>{{passions}}</p>
                 <p>{{spare-time}}</p>
             </article>
             <article class="article">
-                <h1>{{experiences}}</h1>
+                <h1 class="only-print">{{experiences}}</h1>
                 <dl>
                     <dt>2016 - {{today}}</dt>
                     <dd>{{wiztivi}}</dd>
@@ -57,7 +59,7 @@
                 </dl>
             </article>
             <article class="article">
-                <h1>{{skills}}</h1>
+                <h1 class="only-print">{{skills}}</h1>
                 <h2>{{tech}}</h2>
                 <ul>
                     <li>Javascript
@@ -80,7 +82,7 @@
                 </ul>
             </article>
             <article class="article">
-                <h1>{{learning}}</h1>
+                <h1 class="only-print">{{learning}}</h1>
                 <dl>
                     <dt>2015</dt>
                     <dd>{{master}}</dd>
@@ -107,7 +109,7 @@
                 </dl>
             </article>
             <article class="article no-print">
-                <h1>{{contact-me}}</h1>
+                <h1 class="only-print">{{contact-me}}</h1>
                 <p>
                     {{email-at}} <a href="mailto:guillaume.martigny@gmail.com" itemprop="email" rel="nofollow"><i class="fa fa-envelope"></i> guillaume.martigny@gmail.com</a><br/>
                     {{call-at}} <a href="tel:+33660223772" itemprop="telephone" rel="nofollow"><i class="fa fa-phone"></i> +33 6 60 22 37 72</a>

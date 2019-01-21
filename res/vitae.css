@@ -38,7 +38,7 @@ body.ready.translator-ready .article{
     height: 600px;
     margin: -300px auto 0;
     line-height: 1.5em;
-    padding: 0 30px;
+    padding: 20px 30px;
     opacity: 1;
     transition: opacity linear .3s, top ease-out .5s, transform ease-out .3s;
     background: linear-gradient(120deg,
@@ -92,8 +92,9 @@ a:hover sup{
 }
 
 #ident{
-    float: left;
-    margin: 10px;
+    vertical-align: middle;
+    margin-right: 1em;
+    border-radius: 50%;
 }
 
 ul.profiles{
