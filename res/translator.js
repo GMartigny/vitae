@@ -51,7 +51,7 @@ Translator.prototype = {
     _recursiveReplaceDoubleBrace: function(element) {
         var content = element.textContent;
         // text node, replace content
-        if (element.nodeType === 3 && content.trim() != "" && Translator.DOUBLE_BRACE_REGEXP.test(content)) {
+        if (element.nodeType === 3 && content.trim() !== "" && Translator.DOUBLE_BRACE_REGEXP.test(content)) {
             var tempHolder = document.createElement("div");
             tempHolder.innerHTML = content.replace(Translator.DOUBLE_BRACE_REGEXP, Translator.DATA_WRAPPER);
             while (tempHolder.childNodes.length) {
@@ -168,7 +168,7 @@ Translator.prototype = {
             if (str instanceof Array) {
                 str = str.join("<br/>");
             }
-            el.innerHTML = str ? str : el.dataset.translatorKey;
+            el.innerHTML = str === undefined ? el.dataset.translatorKey : str;
         }
 
         if (this.options.onSwitchLang) {
