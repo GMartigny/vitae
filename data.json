@@ -2,38 +2,47 @@
     "en": {
         "title": "My resumé, that's all !",
 
-
         "about-me": "About me",
 
-        "greetings": "Hello, I've been a web developer for more than 6 years.",
+        "greetings": "Web developer with more than 10 years of experience across product development and technical training.",
         "passions": [
-            "I've always been passionated about all of the new technologies and I love to use them to create awesome visual experiences.",
-            "I also really enjoy making tools to ease other developers life."
+            "Passionate about digital technologies, with a strong interest in user interfaces and user experience.",
+            "I also enjoy building tools and solutions that help development teams work more efficiently."
         ],
-        "spare-time": "In my spare time, I practice Capoeira, Salsa and maintain a few personal projects.",
-        "hire": "",
-
+        "spare-time": "In my spare time, I practice Capoeira, Salsa and work on a few personal projects.",
 
         "experiences": "Experiences",
         "today": "today",
 
-        "wiztivi": [
-            "I was working at <a href='https://www.wiztivi.com/' itemprop='worksFor'>Wiztivi</a> as a UI developer.",
-            "In a 25 people team, we are in charge of the Vodafone's TV box, a project release in 6 countries around the globe.",
-            "I used the internal SDK to build all the UI's modules. The main challenges were to keep good performances with the limited STB's resources and adapt to each country technical an legal constrains."
+        "guestsuite": [
+            "Front-end Lead Developer at <a href='https://www.guest-suite.com' itemprop='worksFor'>Guest Suite</a>, a SaaS platform dedicated to customer review management.",
+            "Led the front-end modernization effort as part of the migration from a monolithic PHP application to a modern architecture built around Vue.js and dedicated APIs."
         ],
-        "ageval": [
-            "I spend nearly 3 years at <a href='https://www.ageval.fr' itemprop='worksFor'>Ageval Solutions<sup>(fr)</sup></a> as a web developer.",
-            "My main task was to maintain and improve a web application sold to customers. I was moslty in charge of the front-end in association with graphic designers.",
-            "Keeping a wide range of <span title='All the way to IE8'>browsers compatibility</span> and ensure perfect ergonomy were my main goals."
-        ],
-        "adoc": [
-            "For a year, I worked as web developer at <a href='https://www.adoc-solutions.eu/'>@doc Solutions<sup>(fr)</sup></a>.",
-            "I created several web sites using Joomla from mock-ups. I also built a reservation tickets system hooked at a payment module."
-        ],
-        "training": "I prepared and gave a training course about Prestashop and general use of Internet and its technologies at <a href='https://imie-ecole-informatique.fr/'>IMIE Nantes<sup>(fr)</sup></a>.",
-        "steria": "I participated in the migration of the database of a project management tool at <a href='https://www.soprasteria.com/'>Steria<sup>(fr)</sup></a>.",
 
+        "simplon": [
+            "Front-end web technologies trainer at <a href='https://www.simplon.co/en' itemprop='worksFor'>Simplon</a> for 9 months.",
+            "Mentored a group of twelve students with diverse backgrounds toward a professional qualification, creating hands-on exercises tailored to their individual skill levels and progress."
+        ],
+
+        "wiztivi": [
+            "UI Developer at <a href='https://www.wiztivi.com' itemprop='worksFor'>Wiztivi</a>.",
+            "Contributed to the development of Vodafone's TV platform within a team of around 25 people, delivering the product across six countries.",
+            "Built user interface modules using the internal SDK, with a strong focus on performance and adaptation to local technical and regulatory requirements."
+        ],
+
+        "ageval": [
+            "Web Developer at <a href='https://www.ageval.fr' itemprop='worksFor'>Ageval Solutions<sup>(fr)</sup></a> for nearly three years.",
+            "Maintained and enhanced a business web application used by professional customers, with a primary focus on front-end development.",
+            "Responsible for cross-browser compatibility and overall usability."
+        ],
+
+        "adoc": [
+            "Web Developer at <a href='https://www.adoc-solutions.eu'>@doc Solutions<sup>(fr)</sup></a> for one year.",
+            "Developed Joomla-based websites from design mock-ups and built a ticket reservation system integrated with an online payment solution."
+        ],
+
+        "training": "Designed and delivered training courses covering Prestashop and general web technologies for <a href='https://imie-ecole-informatique.fr/'>IMIE Nantes<sup>(fr)</sup></a>.",
+        "steria": "Participated in the database migration of a project management tool at <a href='https://www.soprasteria.com/'>Steria<sup>(fr)</sup></a>.",
 
         "skills": "Skills",
 
@@ -43,7 +52,6 @@
         "others": "Others",
         "langs": "French, English",
         "ide": "Webstorm and Photoshop",
-
 
         "learning": "Learning",
 
@@ -56,11 +64,10 @@
         "dut": "Technical degree in IT",
         "iut": "At <a href='https://www.iutnantes.univ-nantes.fr/'>IUT Nantes<sup>(fr)</sup></a> (2 years course)",
         "oop": "OOP",
-        "net-n-infra": "Network and infra",
+        "net-n-infra": "Network and infrastructure",
         "comm": "Communication",
 
         "bac": "Bachelor's degree in engineer's sciences",
-
 
         "contact-me": "Contact me",
 
@@ -68,44 +75,53 @@
         "call-at": "or feel free to give me a call at",
         "need-more": "If you need more informations about me, you can find my profile on",
 
-
         "print": "print"
     },
+
     "fr": {
         "title": "Mon CV, tout simplement !",
 
-
         "about-me": "Présentation",
 
-        "greetings": "Bonjour, je travaille en tant que développeur web depuis plus de 6 ans.",
+        "greetings": "Développeur web avec plus de 10 ans d'expérience, entre développement produit et formation.",
         "passions": [
-            "Passionné par toutes les nouvelles technologies depuis toujours, j'aime les utiliser pour créer des expériences visuelles incroyables.",
-            "J'aime aussi beaucoup réaliser des outils pour faciliter la vie des développeurs."
+            "Passionné de technologies numériques, avec un intérêt particulier pour les interfaces utilisateurs et l'expérience utilisateur.",
+            "J'apprécie également la création d'outils et de solutions permettant d'améliorer l'efficacité des équipes de développement."
         ],
-        "spare-time": "Sur mon temps libre, je pratique la Capoeira, la Salsa et maintiens quelques projets personnels.",
-        "hire": "Vous pouvez me recruter en freelance pour vos projets sur <a href='https://www.malt.fr/profile/guillaumemartigny'>Malt</a>.",
-
+        "spare-time": "Sur mon temps libre, je pratique la Capoeira, la Salsa et développe quelques projets personnels.",
 
         "experiences": "Expériences",
         "today": "aujourd'hui",
 
-        "wiztivi": [
-            "J'ai travaillé à <a href='https://www.wiztivi.com/' itemprop='worksFor'>Wiztivi<sup>(en)</sup></a> comme développeur UI.",
-            "Dans une équipe de 25 personnes, nous étions en charge de la box TV de Vodafone, un projet livré dans 6 pays autour du globe.",
-            "J'utilisais le SDK interne pour construire les différents modules de l'interface. Les défis principaux étaient d'obtenir de bonnes performances avec les ressources limitées de la box et être capable de s'adapter aux contraintes techniques et légales de chaque pays."
+        "guestsuite": [
+            "Lead développeur front chez <a href='https://www.guest-suite.com' itemprop='worksFor'>Guest Suite</a>, éditeur d'une plateforme SaaS de gestion des avis clients.",
+            "Pilotage de la refonte du front-end dans le cadre de la migration d'une application PHP monolithique vers une architecture moderne basée sur Vue.js et des API dédiées."
         ],
-        "ageval": [
-            "J'ai passé presque 3 ans à <a href='https://www.ageval.fr' itemprop='worksFor'>Ageval Solutions</a> en tant que développeur web.",
-            "Ma tâche principale était de maintenir et de faire évoluer une application web vendue à nos clients. J'étais surtout en charge de l'intégration en association avec les graphistes.",
-            "Assurer la compatibilité avec <span title='Jusque IE8'>un maximum de navigateurs</span> et une parfaite ergonomie étaient mes principaux buts."
-        ],
-        "adoc": [
-            "Pendant une année, j'ai travaillé en tant que développeur web à <a href='https://www.adoc-solutions.eu/'>@doc Solutions</a>.",
-            "J'y ai créé de nombreux sites vitrine avec Joomla à partir de maquettes. J'ai aussi réalisé un système de réservation et d'impression de tickets en relation avec le module de paiement."
-        ],
-        "training": "J'ai préparé et donné une formation sur Prestashop et sur l'utilisation d'Internet et ses technologies pour le compte d'<a href='https://imie-ecole-informatique.fr/'>IMIE Nantes</a>.",
-        "steria": "J'ai participé à la migration de la base de données d'un outil de gestion de projets à <a href='https://www.soprasteria.com/'>Steria</a>.",
 
+        "simplon": [
+            "Formateur aux technologies web front-end chez <a href='https://www.simplon.co' itemprop='worksFor'>Simplon</a> pendant 9 mois.",
+            "Accompagnement d'une douzaine d'apprenants aux profils variés vers l'obtention d'un diplôme professionnel, avec conception d'exercices pratiques adaptés au niveau et à la progression de chacun."
+        ],
+
+        "wiztivi": [
+            "Développeur UI chez <a href='https://www.wiztivi.com/' itemprop='worksFor'>Wiztivi<sup>(en)</sup></a>.",
+            "Contribution au développement de la box TV Vodafone au sein d'une équipe d'une vingtaine de personnes, pour un déploiement dans six pays.",
+            "Conception des différents modules d'interface à partir du SDK interne, avec une attention particulière portée aux performances et à l'adaptation aux contraintes techniques et réglementaires locales."
+        ],
+
+        "ageval": [
+            "Développeur web chez <a href='https://www.ageval.fr' itemprop='worksFor'>Ageval Solutions</a> pendant près de trois ans.",
+            "Maintenance et évolution d'une application métier commercialisée auprès de clients professionnels, avec une forte implication sur les interfaces utilisateurs.",
+            "Garant de la compatibilité multi-navigateurs et de la qualité ergonomique de l'application."
+        ],
+
+        "adoc": [
+            "Développeur web chez <a href='https://www.adoc-solutions.eu/'>@doc Solutions</a> pendant un an.",
+            "Réalisation de sites web sous Joomla à partir de maquettes graphiques et développement d'un système de réservation connecté à une solution de paiement."
+        ],
+
+        "training": "Conception et animation d'une formation consacrée à Prestashop ainsi qu'aux usages et technologies du web pour le compte d'<a href='https://imie-ecole-informatique.fr/'>IMIE Nantes</a>.",
+        "steria": "Participation à la migration de la base de données d'un outil de gestion de projets chez <a href='https://www.soprasteria.com/'>Steria</a>.",
 
         "skills": "Compétences",
 
@@ -115,7 +131,6 @@
         "others": "Autres",
         "langs": "Français, Anglais",
         "ide": "Webstorm et Photoshop",
-
 
         "learning": "Formation",
 
@@ -133,13 +148,11 @@
 
         "bac": "Baccalauréat S Sciences de l'ingénieur",
 
-
         "contact-me": "Contacts",
 
         "email-at": "Vous pouvez m'envoyer un e-mail à",
         "call-at": "ou n'hésitez pas à me contacter au",
-        "need-more": "Pour encore plus d'informations sur moi, vous trouverez mon profil sur ",
-
+        "need-more": "Pour encore plus d'informations sur moi, vous trouverez mon profil sur",
 
         "print": "imprimer"
     }

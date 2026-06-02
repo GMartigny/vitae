@@ -5,10 +5,10 @@
  * @param {Boolean} options.persists - save selected language into localstorage
  * @param {String} options.lang - starting language
  * @param {String} options.switchesClass - the CSS class of switches
- * @param {String} options.activeSwitchClass - a CSS class apply to current selected switch
- * @param {Function} options.onDOMReady - called when DOM is ready
- * @param {Function} options.onDataError - called when something is wrong with data
- * @param {Function} options.onSwitchLang - called when language is fully changed
+ * @param {String} [options.activeSwitchClass] - a CSS class apply to current selected switch
+ * @param {Function} [options.onDOMReady] - called when DOM is ready
+ * @param {Function} [options.onDataError] - called when something is wrong with data
+ * @param {Function} [options.onSwitchLang] - called when language is fully changed
  * @constructor
  */
 function Translator (jsonDataURL, options) {
