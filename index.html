@@ -42,7 +42,6 @@
                 <p>{{greetings}}</p>
                 <p>{{passions}}</p>
                 <p>{{spare-time}}</p>
-                <p class="no-print" id="hire">{{hire}}</p>
             </article>
             <article class="article">
                 <h1 class="only-print">{{experiences}}</h1>
@@ -134,11 +133,6 @@
                             <img src="res/linkedin.png" width="118" height="30" alt="LinkedIn"/>
                         </a>
                     </li>
-                    <li>
-                        <a href="//www.viadeo.com/p/0021pt05dpt7l1wq">
-                            <img src="res/viadeo.png" width="129" height="30" alt="Viadeo"/>
-                        </a>
-                    </li>
                 </ul>
             </article>
             <aside id="onTheRight" class="no-print">
@@ -153,20 +147,6 @@
                 </div>
             </aside>
         </main>
-        <script>
-            const api = "https://hire.vercel.app/api/";
-            fetch(api)
-                .then((response) => {
-                    if (response.ok) {
-                        return response.json();
-                    }
-                })
-                .then(({available}) => {
-                    if (!available) {
-                        document.querySelector("#hire").style.display = "none";
-                    }
-                })
-        </script>
         <script src="res/translator.js"></script>
         <script>
             /**
